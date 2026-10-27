@@ -126,7 +126,17 @@ window.TRADUCCIONES = {
     "pie.texto": "Tiendita mexicana en Montreal: pan, paletas, abarrotes y antojitos.",
     "pie.paginas": "Páginas",
     "pie.contacto": "Contacto",
-    "pie.derechos": "Todos los derechos reservados."
+    "pie.derechos": "Todos los derechos reservados.",
+    "temporada.eslogan": "Día de Muertos",
+    "temporada.titulo": "¡Ya llegó el pan de muerto!",
+    "temporada.texto": "Horneado en casa, suave y aromático, con ajonjolí o glaseado. Disponible solo por temporada: ven por el tuyo o llámanos para apartarlo.",
+    "temporada.boton": "Apartar mi pan",
+    "galeria.titulo": "Recién salido del horno",
+    "fotos.muertoHorneado": "Pan de muerto glaseado recién horneado",
+    "fotos.muertoAjonjoli": "Pan de muerto con ajonjolí",
+    "fotos.muertoCerca": "Pan de muerto de cerca",
+    "fotos.conchasBolsa": "Bolsa de conchas surtidas",
+    "fotos.conchasEstante": "Conchas de colores en el estante"
   },
 
   en: {
@@ -254,7 +264,17 @@ window.TRADUCCIONES = {
     "pie.texto": "Mexican corner store in Montreal: bread, paletas, groceries and snacks.",
     "pie.paginas": "Pages",
     "pie.contacto": "Contact",
-    "pie.derechos": "All rights reserved."
+    "pie.derechos": "All rights reserved.",
+    "temporada.eslogan": "Day of the Dead",
+    "temporada.titulo": "Pan de muerto is here!",
+    "temporada.texto": "Baked in-house, soft and fragrant, with sesame seeds or glazed. Seasonal only: come get yours or call us to reserve it.",
+    "temporada.boton": "Reserve my bread",
+    "galeria.titulo": "Fresh out of the oven",
+    "fotos.muertoHorneado": "Freshly baked glazed pan de muerto",
+    "fotos.muertoAjonjoli": "Pan de muerto with sesame seeds",
+    "fotos.muertoCerca": "Pan de muerto up close",
+    "fotos.conchasBolsa": "Bag of assorted conchas",
+    "fotos.conchasEstante": "Colourful conchas on the shelf"
   },
 
   fr: {
@@ -382,6 +402,16 @@ window.TRADUCCIONES = {
     "pie.texto": "Épicerie mexicaine à Montréal : pain, paletas, épicerie et grignotines.",
     "pie.paginas": "Pages",
     "pie.contacto": "Contact",
-    "pie.derechos": "Tous droits réservés."
+    "pie.derechos": "Tous droits réservés.",
+    "temporada.eslogan": "Jour des Morts",
+    "temporada.titulo": "Le pan de muerto est arrivé !",
+    "temporada.texto": "Cuit sur place, moelleux et parfumé, au sésame ou glacé. Offert seulement en saison : venez chercher le vôtre ou appelez-nous pour le réserver.",
+    "temporada.boton": "Réserver mon pain",
+    "galeria.titulo": "Tout juste sorti du four",
+    "fotos.muertoHorneado": "Pan de muerto glacé tout juste sorti du four",
+    "fotos.muertoAjonjoli": "Pan de muerto au sésame",
+    "fotos.muertoCerca": "Pan de muerto de près",
+    "fotos.conchasBolsa": "Sac de conchas assorties",
+    "fotos.conchasEstante": "Conchas colorées sur l'étagère"
   }
 };

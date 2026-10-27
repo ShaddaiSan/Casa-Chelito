@@ -95,6 +95,10 @@
       var texto = dic[el.dataset.i18n];
       if (texto !== undefined) el.textContent = texto;
     });
+    document.querySelectorAll("[data-i18n-alt]").forEach(function (el) {
+      var texto = dic[el.dataset.i18nAlt];
+      if (texto !== undefined) el.alt = texto;
+    });
     document.querySelectorAll("[data-i18n-aria]").forEach(function (el) {
       var texto = dic[el.dataset.i18nAria];
       if (texto !== undefined) el.setAttribute("aria-label", texto);
