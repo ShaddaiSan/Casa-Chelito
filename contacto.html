@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Casa Chelito</title>
+  <meta name="description" content="Casa Chelito — tiendita mexicana en Montreal: pan artesanal, paletas, abarrotes, bebidas y antojitos.">
+  <link rel="icon" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@400;700;800&family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-pagina="contacto" data-titulo="nav.contacto">
+  <header id="encabezado"></header>
+  <div class="papel-picado" aria-hidden="true"></div>
+
+  <main>
+  <section class="encabezado-pagina">
+    <div class="contenedor">
+      <p class="script" data-i18n="contacto.eslogan"></p>
+      <h1>📞 <span data-i18n="contacto.titulo"></span></h1>
+      <p data-i18n="contacto.lead"></p>
+    </div>
+  </section>
+
+  <section class="seccion">
+    <div class="contenedor contacto-rejilla">
+      <div class="tarjeta">
+        <h2 data-i18n="contacto.comoPedir"></h2>
+        <ol class="pasos">
+          <li data-i18n="contacto.paso1"></li>
+          <li data-i18n="contacto.paso2"></li>
+          <li data-i18n="contacto.paso3"></li>
+          <li data-i18n="contacto.paso4"></li>
+        </ol>
+        <p><a class="boton" data-tel-link href="#">📞 <span data-telefono></span></a></p>
+        <p><strong data-i18n="contacto.soloLlamada"></strong></p>
+      </div>
+      <div class="tarjeta">
+        <h2 data-i18n="contacto.visitanos"></h2>
+        <p>📍 <span data-direccion></span></p>
+        <h3 data-i18n="contacto.horario"></h3>
+        <table class="horario">
+          <tr><td data-i18n="contacto.lunVie"></td><td data-i18n="contacto.horarioPendiente"></td></tr>
+          <tr><td data-i18n="contacto.sabado"></td><td data-i18n="contacto.horarioPendiente"></td></tr>
+          <tr><td data-i18n="contacto.domingo"></td><td data-i18n="contacto.horarioPendiente"></td></tr>
+        </table>
+      </div>
+    </div>
+    <div class="contenedor" style="margin-top:24px">
+      <iframe class="mapa" data-mapa title="Map" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </section>
+  </main>
+
+  <div class="papel-picado" aria-hidden="true"></div>
+  <footer id="pie"></footer>
+  <script src="js/config.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
