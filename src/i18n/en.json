@@ -102,10 +102,7 @@
   "contacto.soloLlamada": "For now, orders are by phone only.",
   "contacto.visitanos": "Visit us",
   "contacto.horario": "Hours",
-  "contacto.lunVie": "Monday to Friday",
-  "contacto.sabado": "Saturday",
   "contacto.domingo": "Sunday",
-  "contacto.horarioPendiente": "To be confirmed",
   "pie.texto": "Mexican corner store in Montreal: bread, paletas, groceries and snacks.",
   "pie.paginas": "Pages",
   "pie.contacto": "Contact",
@@ -195,5 +192,13 @@
   "fotos.gansito": "Boxes of Gansito and Marías cookies",
   "fotos.limpieza": "Zote, Fabuloso and Downy cleaning products",
   "contacto.comoLlegar": "Get directions",
-  "contacto.redes": "Follow us"
+  "contacto.redes": "Follow us",
+  "contacto.lunSab": "Monday to Saturday",
+  "contacto.horaLunSab": "10 a.m. – 8 p.m.",
+  "contacto.horaDomingo": "10 a.m. – 7 p.m.",
+  "tamales.eslogan": "Tamales are here!",
+  "tamales.titulo": "Casa Chelito tamales",
+  "tamales.texto": "Tamales wrapped in banana leaf, soft and full of flavour, served with salsas on the side. Ask about today’s tamales or call us to reserve yours.",
+  "tamales.boton": "Order tamales",
+  "fotos.tamal": "Tamal in banana leaf with three salsas"
 }

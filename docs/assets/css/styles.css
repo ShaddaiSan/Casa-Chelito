@@ -764,3 +764,7 @@ address { font-style: normal; }
 .tienda-fotos + .mapa-contenedor { margin-top: 32px; }
 .pie .redes { flex-direction: row; }
 .pie .redes li { margin: 0; }
+
+/* Foto vertical (tamales) */
+.foto-temporada.vertical { max-width: 420px; margin: 0 auto; }
+.foto-temporada.vertical img { aspect-ratio: 4 / 5; object-position: center 30%; }

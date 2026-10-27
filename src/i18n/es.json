@@ -102,10 +102,7 @@
   "contacto.soloLlamada": "Por el momento los pedidos son únicamente por llamada.",
   "contacto.visitanos": "Visítanos",
   "contacto.horario": "Horario",
-  "contacto.lunVie": "Lunes a viernes",
-  "contacto.sabado": "Sábado",
   "contacto.domingo": "Domingo",
-  "contacto.horarioPendiente": "Por confirmar",
   "pie.texto": "Tiendita mexicana en Montreal: pan, paletas, abarrotes y antojitos.",
   "pie.paginas": "Páginas",
   "pie.contacto": "Contacto",
@@ -195,5 +192,13 @@
   "fotos.gansito": "Cajas de Gansito y galletas Marías",
   "fotos.limpieza": "Productos de limpieza Zote, Fabuloso y Downy",
   "contacto.comoLlegar": "Cómo llegar",
-  "contacto.redes": "Síguenos"
+  "contacto.redes": "Síguenos",
+  "contacto.lunSab": "Lunes a sábado",
+  "contacto.horaLunSab": "10:00 – 20:00",
+  "contacto.horaDomingo": "10:00 – 19:00",
+  "tamales.eslogan": "¡Hay tamales!",
+  "tamales.titulo": "Tamales de Casa Chelito",
+  "tamales.texto": "Tamales envueltos en hoja de plátano, suaves y llenos de sabor, con sus salsas para acompañar. Pregunta por los de hoy o llámanos para apartarlos.",
+  "tamales.boton": "Pedir tamales",
+  "fotos.tamal": "Tamal en hoja de plátano con tres salsas"
 }

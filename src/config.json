@@ -14,5 +14,26 @@
   "idioma_por_defecto": "fr",
   "calle": "7351 Rue Jarry E",
   "codigo_postal": "H1J 1G8",
-  "mapa_link": "https://www.google.com/maps/search/?api=1&query=7351+Rue+Jarry+E,+Montr%C3%A9al,+QC+H1J+1G8"
+  "mapa_link": "https://www.google.com/maps/search/?api=1&query=7351+Rue+Jarry+E,+Montr%C3%A9al,+QC+H1J+1G8",
+  "horario": [
+    [
+      [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "10:00",
+      "20:00"
+    ],
+    [
+      [
+        "Sunday"
+      ],
+      "10:00",
+      "19:00"
+    ]
+  ]
 }

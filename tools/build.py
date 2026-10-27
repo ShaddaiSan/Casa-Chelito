@@ -231,6 +231,10 @@ def datos_estructurados(lang):
                     "addressLocality": CONFIG["ciudad"], "addressRegion": CONFIG["region"],
                     "postalCode": CONFIG["codigo_postal"], "addressCountry": CONFIG["pais"]},
         "sameAs": [CONFIG[r] for r in ("facebook", "instagram") if CONFIG.get(r)],
+        "openingHoursSpecification": [
+            {"@type": "OpeningHoursSpecification", "dayOfWeek": dias, "opens": abre, "closes": cierra}
+            for dias, abre, cierra in CONFIG["horario"]
+        ],
     }
     if CONFIG["telefono_confirmado"]:
         datos["telephone"] = CONFIG["telefono_link"]

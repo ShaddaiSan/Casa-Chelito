@@ -17,7 +17,19 @@
       </div>
     </section>
 
-    <section class="seccion">
+    <section class="seccion temporada-banda" aria-labelledby="tamales-titulo">
+      <div class="contenedor temporada invertida">
+        {{img tamal alt=fotos.tamal class="foto-temporada vertical" sizes="(min-width: 761px) 420px, 90vw"}}
+        <div class="aparecer">
+          <p class="script">{{t.tamales.eslogan}}</p>
+          <h2 id="tamales-titulo">{{t.tamales.titulo}}</h2>
+          <p>{{t.tamales.texto}}</p>
+          <a class="boton" href="tel:{{c.telefono_link}}">{{t.tamales.boton}}</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion blanca">
       <div class="contenedor">
         <ul class="productos-foto categorias">
           <li class="aparecer">

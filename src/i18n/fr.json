@@ -102,10 +102,7 @@
   "contacto.soloLlamada": "Pour l'instant, les commandes se font uniquement par téléphone.",
   "contacto.visitanos": "Venez nous voir",
   "contacto.horario": "Heures d'ouverture",
-  "contacto.lunVie": "Lundi au vendredi",
-  "contacto.sabado": "Samedi",
   "contacto.domingo": "Dimanche",
-  "contacto.horarioPendiente": "À confirmer",
   "pie.texto": "Épicerie mexicaine à Montréal : pain, paletas, épicerie et grignotines.",
   "pie.paginas": "Pages",
   "pie.contacto": "Contact",
@@ -195,5 +192,13 @@
   "fotos.gansito": "Boîtes de Gansito et de biscuits Marías",
   "fotos.limpieza": "Produits d’entretien Zote, Fabuloso et Downy",
   "contacto.comoLlegar": "Itinéraire",
-  "contacto.redes": "Suivez-nous"
+  "contacto.redes": "Suivez-nous",
+  "contacto.lunSab": "Lundi au samedi",
+  "contacto.horaLunSab": "10 h – 20 h",
+  "contacto.horaDomingo": "10 h – 19 h",
+  "tamales.eslogan": "Il y a des tamales !",
+  "tamales.titulo": "Les tamales de Casa Chelito",
+  "tamales.texto": "Des tamales enveloppés dans une feuille de bananier, moelleux et pleins de saveur, servis avec leurs salsas. Demandez ceux du jour ou appelez-nous pour les réserver.",
+  "tamales.boton": "Commander des tamales",
+  "fotos.tamal": "Tamal en feuille de bananier avec trois salsas"
 }
