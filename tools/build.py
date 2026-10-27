@@ -203,11 +203,18 @@ def hreflang(pagina):
     return "\n  ".join(lineas)
 
 
-def redes():
+ICONOS = {
+    "instagram": '<svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1.1.4 2.2.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1.1.4-2.2.4-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1.1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1.1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.1 0-3.5 0-4.7.1-1 0-1.6.2-2 .3-.5.2-.8.4-1.2.8-.4.4-.6.7-.8 1.2-.1.4-.3.9-.3 2C3 9.5 3 9.9 3 12s0 3.5.1 4.7c0 1 .2 1.6.3 2 .2.5.4.8.8 1.2.4.4.7.6 1.2.8.4.1.9.3 2 .3 1.2.1 1.6.1 4.7.1s3.5 0 4.7-.1c1 0 1.6-.2 2-.3.5-.2.8-.4 1.2-.8.4-.4.6-.7.8-1.2.1-.4.3-.9.3-2 .1-1.2.1-1.6.1-4.7s0-3.5-.1-4.7c0-1-.2-1.6-.3-2-.2-.5-.4-.8-.8-1.2-.4-.4-.7-.6-1.2-.8-.4-.1-.9-.3-2-.3C15.5 4 15.1 4 12 4zm0 3.1a4.9 4.9 0 1 1 0 9.8 4.9 4.9 0 0 1 0-9.8zm0 8a3.1 3.1 0 1 0 0-6.2 3.1 3.1 0 0 0 0 6.2zm6.2-8.2a1.1 1.1 0 1 1-2.3 0 1.1 1.1 0 0 1 2.3 0z"/></svg>',
+    "facebook": '<svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.3v7A10 10 0 0 0 22 12z"/></svg>',
+}
+
+
+def redes(clase=""):
     items = []
     for red in ("instagram", "facebook"):
         if CONFIG.get(red):
-            items.append(f'<li><a href="{html.escape(CONFIG[red])}" rel="noopener">{red.capitalize()}</a></li>')
+            items.append(f'<li><a class="red {red}" href="{html.escape(CONFIG[red])}" rel="noopener" target="_blank">'
+                         f'{ICONOS[red]}<span>{red.capitalize()}</span></a></li>')
     return "".join(items)
 
 
@@ -220,8 +227,10 @@ def datos_estructurados(lang):
         "image": CONFIG["url"] + "assets/img/logo-500.png",
         "description": TEXTOS[lang]["meta.descInicio"],
         "servesCuisine": "Mexican",
-        "address": {"@type": "PostalAddress", "addressLocality": CONFIG["ciudad"],
-                    "addressRegion": CONFIG["region"], "addressCountry": CONFIG["pais"]},
+        "address": {"@type": "PostalAddress", "streetAddress": CONFIG["calle"],
+                    "addressLocality": CONFIG["ciudad"], "addressRegion": CONFIG["region"],
+                    "postalCode": CONFIG["codigo_postal"], "addressCountry": CONFIG["pais"]},
+        "sameAs": [CONFIG[r] for r in ("facebook", "instagram") if CONFIG.get(r)],
     }
     if CONFIG["telefono_confirmado"]:
         datos["telephone"] = CONFIG["telefono_link"]

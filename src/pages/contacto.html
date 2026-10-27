@@ -21,7 +21,10 @@
         </article>
         <article class="tarjeta" aria-labelledby="visitanos">
           <h2 id="visitanos">{{t.contacto.visitanos}}</h2>
-          <address><p>{{c.direccion}}</p></address>
+          <address><p>{{c.calle}}<br>{{c.ciudad}}, {{c.region}} {{c.codigo_postal}}</p></address>
+          <p><a class="boton verde" href="{{c.mapa_link}}" rel="noopener" target="_blank">{{t.contacto.comoLlegar}}</a></p>
+          <h3>{{t.contacto.redes}}</h3>
+          <ul class="redes grandes">{{redes}}</ul>
           <h3>{{t.contacto.horario}}</h3>
           <table class="horario">
             <caption class="visualmente-oculto">{{t.contacto.horario}}</caption>

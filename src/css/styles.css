@@ -738,3 +738,29 @@ address { font-style: normal; }
 @media (min-width: 900px) {
   .productos-foto.categorias { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
+
+/* Redes sociales */
+.redes { list-style: none; padding: 0; margin: 12px 0 0; display: flex; flex-wrap: wrap; gap: 10px; }
+.redes .red {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 800;
+  color: var(--blanco);
+  transition: translate 0.15s ease;
+}
+.redes .red:hover { translate: 0 -2px; }
+.redes .instagram { background: #c13584; }
+.redes .facebook { background: #1565c0; }
+.pie .redes .red { color: var(--blanco); }
+.redes.grandes { margin-bottom: 16px; }
+.tarjeta .redes { padding-left: 0; }
+.tarjeta .boton + h3,
+.tarjeta p:has(> .boton) + h3 { margin-top: 20px; }
+.tienda-fotos + .mapa-contenedor { margin-top: 32px; }
+.pie .redes { flex-direction: row; }
+.pie .redes li { margin: 0; }
