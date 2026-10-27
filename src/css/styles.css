@@ -768,3 +768,4 @@ address { font-style: normal; }
 /* Foto vertical (tamales) */
 .foto-temporada.vertical { max-width: 420px; margin: 0 auto; }
 .foto-temporada.vertical img { aspect-ratio: 4 / 5; object-position: center 30%; }
+.foto-jarritos img { object-position: center 45%; }

@@ -81,7 +81,7 @@
   "abarrotes.despensa3": "Haricots, piments et légumes en conserve",
   "abarrotes.despensa4": "Lait concentré, cajeta et desserts",
   "abarrotes.bebidas": "Boissons",
-  "abarrotes.bebidas1": "Boissons gazeuses mexicaines",
+  "abarrotes.bebidas1": "Boissons gazeuses mexicaines comme Jarritos",
   "abarrotes.bebidas2": "Jus et boissons",
   "abarrotes.bebidas3": "Boissons en poudre",
   "abarrotes.bebidas4": "Café et chocolat mexicain",
@@ -200,5 +200,6 @@
   "tamales.titulo": "Les tamales de Casa Chelito",
   "tamales.texto": "Des tamales enveloppés dans une feuille de bananier, moelleux et pleins de saveur, servis avec leurs salsas. Demandez ceux du jour ou appelez-nous pour les réserver.",
   "tamales.boton": "Commander des tamales",
-  "fotos.tamal": "Tamal en feuille de bananier avec trois salsas"
+  "fotos.tamal": "Tamal en feuille de bananier avec trois salsas",
+  "fotos.jarritos": "Boissons gazeuses Jarritos au réfrigérateur"
 }

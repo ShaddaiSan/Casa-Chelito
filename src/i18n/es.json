@@ -81,7 +81,7 @@
   "abarrotes.despensa3": "Frijoles, chiles y verduras en lata",
   "abarrotes.despensa4": "Leche condensada, cajeta y postres",
   "abarrotes.bebidas": "Bebidas",
-  "abarrotes.bebidas1": "Refrescos mexicanos",
+  "abarrotes.bebidas1": "Refrescos mexicanos como Jarritos",
   "abarrotes.bebidas2": "Jugos y bebidas",
   "abarrotes.bebidas3": "Bebidas en polvo",
   "abarrotes.bebidas4": "Café y chocolate de mesa",
@@ -200,5 +200,6 @@
   "tamales.titulo": "Tamales de Casa Chelito",
   "tamales.texto": "Tamales envueltos en hoja de plátano, suaves y llenos de sabor, con sus salsas para acompañar. Pregunta por los de hoy o llámanos para apartarlos.",
   "tamales.boton": "Pedir tamales",
-  "fotos.tamal": "Tamal en hoja de plátano con tres salsas"
+  "fotos.tamal": "Tamal en hoja de plátano con tres salsas",
+  "fotos.jarritos": "Refrescos Jarritos en el refrigerador"
 }

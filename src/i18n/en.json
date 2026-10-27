@@ -81,7 +81,7 @@
   "abarrotes.despensa3": "Canned beans, chiles and vegetables",
   "abarrotes.despensa4": "Condensed milk, cajeta and desserts",
   "abarrotes.bebidas": "Drinks",
-  "abarrotes.bebidas1": "Mexican sodas",
+  "abarrotes.bebidas1": "Mexican sodas like Jarritos",
   "abarrotes.bebidas2": "Juices and drinks",
   "abarrotes.bebidas3": "Powdered drink mixes",
   "abarrotes.bebidas4": "Coffee and Mexican chocolate",
@@ -200,5 +200,6 @@
   "tamales.titulo": "Casa Chelito tamales",
   "tamales.texto": "Tamales wrapped in banana leaf, soft and full of flavour, served with salsas on the side. Ask about today’s tamales or call us to reserve yours.",
   "tamales.boton": "Order tamales",
-  "fotos.tamal": "Tamal in banana leaf with three salsas"
+  "fotos.tamal": "Tamal in banana leaf with three salsas",
+  "fotos.jarritos": "Jarritos sodas in the fridge"
 }
