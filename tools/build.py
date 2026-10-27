@@ -22,7 +22,7 @@ import re
 import shutil
 from pathlib import Path
 
-from PIL import Image, ImageFilter, ImageOps
+from PIL import Image, ImageEnhance, ImageFilter, ImageOps
 
 RAIZ = Path(__file__).resolve().parent.parent
 SRC = RAIZ / "src"
@@ -53,6 +53,8 @@ DIMENSIONES = {}
 def optimizar_imagenes():
     destino = OUT / "assets" / "img"
     destino.mkdir(parents=True, exist_ok=True)
+    archivo_ajustes = SRC / "images" / "ajustes.json"
+    ajustes = json.loads(archivo_ajustes.read_text()) if archivo_ajustes.exists() else {}
     for origen in sorted((SRC / "images").iterdir()):
         if origen.suffix.lower() not in (".jpg", ".jpeg", ".png", ".webp"):
             continue
@@ -62,10 +64,16 @@ def optimizar_imagenes():
             generar_logo(im, destino)
             continue
         im = im.convert("RGB")
+        ajuste = ajustes.get(nombre, {})
+        if "brillo" in ajuste:
+            im = ImageEnhance.Brightness(im).enhance(ajuste["brillo"])
+        if "contraste" in ajuste:
+            im = ImageEnhance.Contrast(im).enhance(ajuste["contraste"])
         DIMENSIONES[nombre] = im.size
         for ancho in anchos_para(im.width):
             salidas = {fmt: destino / f"{nombre}-{ancho}.{fmt}" for fmt in ("avif", "webp", "jpg")}
-            if all(s.exists() and s.stat().st_mtime > origen.stat().st_mtime for s in salidas.values()):
+            mas_reciente = max(origen.stat().st_mtime, archivo_ajustes.stat().st_mtime if ajuste else 0)
+            if all(s.exists() and s.stat().st_mtime > mas_reciente for s in salidas.values()):
                 continue
             alto = round(im.height * ancho / im.width)
             copia = im.resize((ancho, alto), Image.LANCZOS).filter(

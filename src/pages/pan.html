@@ -11,8 +11,17 @@
     <section class="seccion" aria-labelledby="pan-dulce">
       <div class="contenedor">
         <header class="titulo"><h2 id="pan-dulce">{{t.pan.dulce}}</h2><span class="adorno" aria-hidden="true"></span></header>
+        <ul class="productos-foto">
+          <li class="aparecer">
+            {{img concha-rosa alt=fotos.conchaRosa sizes="(min-width: 1120px) 340px, (min-width: 700px) 45vw, 100vw"}}
+            <div><h3>{{t.pan.concha}}</h3><p>{{t.pan.conchaFoto}}</p></div>
+          </li>
+          <li class="aparecer">
+            {{img galletas alt=fotos.galletas sizes="(min-width: 1120px) 340px, (min-width: 700px) 45vw, 100vw"}}
+            <div><h3>{{t.pan.galleta}}</h3><p>{{t.pan.galletaD}}</p></div>
+          </li>
+        </ul>
         <ul class="lista-productos">
-          <li><span class="producto">{{t.pan.concha}}</span><span class="detalle">{{t.pan.conchaD}}</span></li>
           <li><span class="producto">{{t.pan.cuernito}}</span><span class="detalle">{{t.pan.cuernitoD}}</span></li>
           <li><span class="producto">{{t.pan.oreja}}</span><span class="detalle">{{t.pan.orejaD}}</span></li>
           <li><span class="producto">{{t.pan.polvoron}}</span><span class="detalle">{{t.pan.polvoronD}}</span></li>
@@ -35,6 +44,12 @@
     <section class="seccion" aria-labelledby="pan-temporada">
       <div class="contenedor">
         <header class="titulo"><h2 id="pan-temporada">{{t.pan.temporada}}</h2><span class="adorno" aria-hidden="true"></span></header>
+        <ul class="productos-foto">
+          <li class="aparecer">
+            {{img pan-de-muerto-concha alt=fotos.muertoConcha sizes="(min-width: 1120px) 340px, (min-width: 700px) 45vw, 100vw"}}
+            <div><h3>{{t.pan.muertoConcha}}</h3><p>{{t.pan.muertoConchaD}}</p></div>
+          </li>
+        </ul>
         <ul class="lista-productos">
           <li><span class="producto">{{t.pan.muerto}}</span><span class="detalle">{{t.pan.muertoD}}</span></li>
           <li><span class="producto">{{t.pan.rosca}}</span><span class="detalle">{{t.pan.roscaD}}</span></li>
@@ -46,10 +61,12 @@
       <div class="contenedor">
         <header class="titulo"><h2 id="galeria-titulo">{{t.galeria.titulo}}</h2><span class="adorno" aria-hidden="true"></span></header>
         <div class="galeria">
-          <figure class="aparecer">{{img pan-de-muerto-ajonjoli alt=fotos.muertoAjonjoli sizes="(min-width: 1120px) 270px, (min-width: 600px) 45vw, 100vw"}}<figcaption>{{t.fotos.muertoAjonjoli}}</figcaption></figure>
-          <figure class="aparecer">{{img pan-de-muerto-cerca alt=fotos.muertoCerca sizes="(min-width: 1120px) 270px, (min-width: 600px) 45vw, 100vw"}}<figcaption>{{t.fotos.muertoCerca}}</figcaption></figure>
-          <figure class="aparecer">{{img conchas-bolsa alt=fotos.conchasBolsa sizes="(min-width: 1120px) 270px, (min-width: 600px) 45vw, 100vw"}}<figcaption>{{t.fotos.conchasBolsa}}</figcaption></figure>
-          <figure class="aparecer">{{img conchas-estante alt=fotos.conchasEstante sizes="(min-width: 1120px) 270px, (min-width: 600px) 45vw, 100vw"}}<figcaption>{{t.fotos.conchasEstante}}</figcaption></figure>
+          <figure class="aparecer">{{img pan-de-muerto-ajonjoli alt=fotos.muertoAjonjoli sizes="(min-width: 1120px) 350px, (min-width: 600px) 45vw, 100vw"}}<figcaption>{{t.fotos.muertoAjonjoli}}</figcaption></figure>
+          <figure class="aparecer">{{img pan-de-muerto-concha alt=fotos.muertoConcha sizes="(min-width: 1120px) 350px, (min-width: 600px) 45vw, 100vw"}}<figcaption>{{t.fotos.muertoConcha}}</figcaption></figure>
+          <figure class="aparecer">{{img galletas-mermelada alt=fotos.galletasMermelada sizes="(min-width: 1120px) 350px, (min-width: 600px) 45vw, 100vw"}}<figcaption>{{t.fotos.galletasMermelada}}</figcaption></figure>
+          <figure class="aparecer">{{img pan-de-muerto-cerca alt=fotos.muertoCerca sizes="(min-width: 1120px) 350px, (min-width: 600px) 45vw, 100vw"}}<figcaption>{{t.fotos.muertoCerca}}</figcaption></figure>
+          <figure class="aparecer">{{img conchas-bolsa alt=fotos.conchasBolsa sizes="(min-width: 1120px) 350px, (min-width: 600px) 45vw, 100vw"}}<figcaption>{{t.fotos.conchasBolsa}}</figcaption></figure>
+          <figure class="aparecer">{{img conchas-estante alt=fotos.conchasEstante sizes="(min-width: 1120px) 350px, (min-width: 600px) 45vw, 100vw"}}<figcaption>{{t.fotos.conchasEstante}}</figcaption></figure>
         </div>
       </div>
     </section>

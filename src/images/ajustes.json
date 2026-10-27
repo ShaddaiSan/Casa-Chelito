@@ -1,0 +1,5 @@
+{
+  "_ayuda": "Ajustes opcionales por foto: brillo y contraste (1 = sin cambio).",
+  "galletas": { "brillo": 1.15, "contraste": 1.05 },
+  "galletas-mermelada": { "brillo": 1.18, "contraste": 1.05 }
+}
