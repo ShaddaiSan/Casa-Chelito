@@ -6,31 +6,72 @@
       </div>
     </section>
 
-    <section class="seccion" aria-labelledby="paletas-agua">
+    <section class="seccion temporada-banda blanca" aria-labelledby="paletas-destacado">
+      <div class="contenedor temporada">
+        {{img paletas-fila alt=fotos.paletasFila class="foto-temporada" sizes="(min-width: 761px) 50vw, 100vw"}}
+        <div class="aparecer">
+          <p class="script">{{t.paletas.destacadoEslogan}}</p>
+          <h2 id="paletas-destacado">{{t.paletas.destacadoTitulo}}</h2>
+          <p>{{t.paletas.destacadoTexto}}</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion" aria-labelledby="sabores-titulo">
       <div class="contenedor">
-        <header class="titulo"><h2 id="paletas-agua">{{t.paletas.agua}}</h2><span class="adorno" aria-hidden="true"></span></header>
-        <ul class="lista-productos">
-          <li><span class="producto">{{t.paletas.mango}}</span></li>
-          <li><span class="producto">{{t.paletas.limon}}</span></li>
-          <li><span class="producto">{{t.paletas.tamarindo}}</span></li>
-          <li><span class="producto">{{t.paletas.jamaica}}</span></li>
-          <li><span class="producto">{{t.paletas.sandia}}</span></li>
-          <li><span class="producto">{{t.paletas.pepino}}</span></li>
+        <header class="titulo"><h2 id="sabores-titulo">{{t.paletas.sabores}}</h2><p>{{t.paletas.saboresTexto}}</p><span class="adorno" aria-hidden="true"></span></header>
+        <div class="rejilla sabores">
+          <article class="tarjeta aparecer">
+            <h3>{{t.paletas.agua}}</h3>
+            <ul><li>{{t.paletas.mango}}</li><li>{{t.paletas.fresa}}</li><li>{{t.paletas.tamarindo}}</li><li>{{t.paletas.pina}}</li><li>{{t.paletas.limon}}</li></ul>
+          </article>
+          <article class="tarjeta aparecer">
+            <h3>{{t.paletas.chamoy}}</h3>
+            <ul><li>{{t.paletas.mango}}</li><li>{{t.paletas.pina}}</li><li>{{t.paletas.fresa}}</li><li>{{t.paletas.tamarindo}}</li><li>{{t.paletas.limon}}</li></ul>
+          </article>
+          <article class="tarjeta aparecer">
+            <h3>{{t.paletas.crema}}</h3>
+            <ul><li>{{t.paletas.coco}}</li><li>{{t.paletas.fresa}}</li><li>{{t.paletas.rompope}}</li><li>{{t.paletas.nuez}}</li><li>{{t.paletas.pistache}}</li><li>{{t.paletas.vainilla}}</li><li>{{t.paletas.oreo}}</li><li>{{t.paletas.chocolate}}</li><li>{{t.paletas.mango}}</li></ul>
+          </article>
+          <article class="tarjeta aparecer">
+            <h3>{{t.paletas.temporada}}</h3>
+            <p>{{t.paletas.temporadaTexto}}</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion blanca" aria-labelledby="helados-titulo">
+      <div class="contenedor">
+        <header class="titulo"><h2 id="helados-titulo">{{t.helados.titulo}}</h2><p>{{t.helados.texto}}</p><span class="adorno" aria-hidden="true"></span></header>
+        <ul class="productos-foto">
+          <li class="aparecer">
+            {{img helados-congelador alt=fotos.heladosCongelador sizes="(min-width: 1120px) 350px, (min-width: 600px) 45vw, 100vw"}}
+            <div><h3>{{t.helados.bola}}</h3><p>{{t.helados.bolaD}}</p></div>
+          </li>
+          <li class="aparecer">
+            {{img helado-suave alt=fotos.heladoSuave sizes="(min-width: 1120px) 350px, (min-width: 600px) 45vw, 100vw"}}
+            <div><h3>{{t.helados.suave}}</h3><p>{{t.helados.suaveD}}</p></div>
+          </li>
+          <li class="aparecer">
+            {{img carrito-paletero alt=fotos.carrito sizes="(min-width: 1120px) 350px, (min-width: 600px) 45vw, 100vw"}}
+            <div><h3>{{t.paletas.carrito}}</h3><p>{{t.paletas.carritoD}}</p></div>
+          </li>
         </ul>
       </div>
     </section>
 
-    <section class="seccion blanca" aria-labelledby="paletas-leche">
+    <section class="seccion" aria-labelledby="galeria-paletas">
       <div class="contenedor">
-        <header class="titulo"><h2 id="paletas-leche">{{t.paletas.leche}}</h2><span class="adorno" aria-hidden="true"></span></header>
-        <ul class="lista-productos">
-          <li><span class="producto">{{t.paletas.fresa}}</span></li>
-          <li><span class="producto">{{t.paletas.coco}}</span></li>
-          <li><span class="producto">{{t.paletas.arroz}}</span></li>
-          <li><span class="producto">{{t.paletas.mazapan}}</span></li>
-          <li><span class="producto">{{t.paletas.nuez}}</span></li>
-          <li><span class="producto">{{t.paletas.chocolate}}</span></li>
-        </ul>
+        <header class="titulo"><h2 id="galeria-paletas">{{t.paletas.galeria}}</h2><span class="adorno" aria-hidden="true"></span></header>
+        <div class="galeria">
+          <figure class="aparecer">{{img paleta-verde alt=fotos.paletaVerde sizes="(min-width: 1120px) 350px, (min-width: 600px) 45vw, 100vw"}}<figcaption>{{t.fotos.paletaVerde}}</figcaption></figure>
+          <figure class="aparecer">{{img paletas-colores alt=fotos.paletasColores sizes="(min-width: 1120px) 350px, (min-width: 600px) 45vw, 100vw"}}<figcaption>{{t.fotos.paletasColores}}</figcaption></figure>
+          <figure class="aparecer">{{img paletas-sobre-congelador alt=fotos.paletasSobre sizes="(min-width: 1120px) 350px, (min-width: 600px) 45vw, 100vw"}}<figcaption>{{t.fotos.paletasSobre}}</figcaption></figure>
+          <figure class="aparecer">{{img paletas-acomodadas alt=fotos.paletasAcomodadas sizes="(min-width: 1120px) 350px, (min-width: 600px) 45vw, 100vw"}}<figcaption>{{t.fotos.paletasAcomodadas}}</figcaption></figure>
+          <figure class="aparecer">{{img congelador-tienda alt=fotos.congeladorTienda sizes="(min-width: 1120px) 350px, (min-width: 600px) 45vw, 100vw"}}<figcaption>{{t.fotos.congeladorTienda}}</figcaption></figure>
+          <figure class="aparecer">{{img helados-arcoiris alt=fotos.heladosArcoiris sizes="(min-width: 1120px) 350px, (min-width: 600px) 45vw, 100vw"}}<figcaption>{{t.fotos.heladosArcoiris}}</figcaption></figure>
+        </div>
       </div>
     </section>
 

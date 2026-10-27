@@ -6,13 +6,37 @@
       </div>
     </section>
 
+    <section class="seccion temporada-banda blanca" aria-labelledby="abarrotes-destacado">
+      <div class="contenedor temporada">
+        {{img estante-abarrotes alt=fotos.estanteAbarrotes class="foto-temporada" sizes="(min-width: 761px) 50vw, 100vw"}}
+        <div class="aparecer">
+          <p class="script">{{t.abarrotes.destacadoEslogan}}</p>
+          <h2 id="abarrotes-destacado">{{t.abarrotes.destacadoTitulo}}</h2>
+          <p>{{t.abarrotes.destacadoTexto}}</p>
+        </div>
+      </div>
+    </section>
+
     <section class="seccion">
       <div class="contenedor">
-        <div class="rejilla">
-          <article class="tarjeta aparecer"><span class="icono" aria-hidden="true">🌽</span><h2 class="h3">{{t.abarrotes.despensa}}</h2><ul><li>{{t.abarrotes.despensa1}}</li><li>{{t.abarrotes.despensa2}}</li><li>{{t.abarrotes.despensa3}}</li><li>{{t.abarrotes.despensa4}}</li></ul></article>
-          <article class="tarjeta aparecer"><span class="icono" aria-hidden="true">🥤</span><h2 class="h3">{{t.abarrotes.bebidas}}</h2><ul><li>{{t.abarrotes.bebidas1}}</li><li>{{t.abarrotes.bebidas2}}</li><li>{{t.abarrotes.bebidas3}}</li><li>{{t.abarrotes.bebidas4}}</li></ul></article>
-          <article class="tarjeta aparecer"><span class="icono" aria-hidden="true">🌮</span><h2 class="h3">{{t.abarrotes.antojitos}}</h2><ul><li>{{t.abarrotes.antojitos1}}</li><li>{{t.abarrotes.antojitos2}}</li><li>{{t.abarrotes.antojitos3}}</li><li>{{t.abarrotes.antojitos4}}</li></ul></article>
-        </div>
+        <ul class="productos-foto categorias">
+          <li class="aparecer">
+            {{img salsas-la-anita alt=fotos.salsas sizes="(min-width: 1120px) 350px, (min-width: 600px) 45vw, 100vw"}}
+            <div><h2 class="h3">{{t.abarrotes.despensa}}</h2><ul><li>{{t.abarrotes.despensa1}}</li><li>{{t.abarrotes.despensa2}}</li><li>{{t.abarrotes.despensa3}}</li><li>{{t.abarrotes.despensa4}}</li></ul></div>
+          </li>
+          <li class="aparecer">
+            {{img gansito-marias alt=fotos.gansito sizes="(min-width: 1120px) 350px, (min-width: 600px) 45vw, 100vw"}}
+            <div><h2 class="h3">{{t.abarrotes.antojitos}}</h2><ul><li>{{t.abarrotes.antojitos1}}</li><li>{{t.abarrotes.antojitos2}}</li><li>{{t.abarrotes.antojitos3}}</li><li>{{t.abarrotes.antojitos4}}</li></ul></div>
+          </li>
+          <li class="aparecer">
+            {{img hogar-limpieza alt=fotos.limpieza sizes="(min-width: 1120px) 350px, (min-width: 600px) 45vw, 100vw"}}
+            <div><h2 class="h3">{{t.abarrotes.hogar}}</h2><ul><li>{{t.abarrotes.hogar1}}</li><li>{{t.abarrotes.hogar2}}</li><li>{{t.abarrotes.hogar3}}</li></ul></div>
+          </li>
+          <li class="aparecer sin-foto">
+            <div class="ilustracion" aria-hidden="true">🥤</div>
+            <div><h2 class="h3">{{t.abarrotes.bebidas}}</h2><ul><li>{{t.abarrotes.bebidas1}}</li><li>{{t.abarrotes.bebidas2}}</li><li>{{t.abarrotes.bebidas3}}</li><li>{{t.abarrotes.bebidas4}}</li></ul></div>
+          </li>
+        </ul>
       </div>
     </section>
 

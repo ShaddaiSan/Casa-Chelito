@@ -65,6 +65,8 @@ def optimizar_imagenes():
             continue
         im = im.convert("RGB")
         ajuste = ajustes.get(nombre, {})
+        if "recorte" in ajuste:
+            im = im.crop(tuple(ajuste["recorte"]))
         if "brillo" in ajuste:
             im = ImageEnhance.Brightness(im).enhance(ajuste["brillo"])
         if "contraste" in ajuste:

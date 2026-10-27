@@ -34,8 +34,13 @@
     <section class="seccion blanca" aria-labelledby="pan-salado">
       <div class="contenedor">
         <header class="titulo"><h2 id="pan-salado">{{t.pan.salado}}</h2><span class="adorno" aria-hidden="true"></span></header>
+        <ul class="productos-foto">
+          <li class="aparecer">
+            {{img bolillos alt=fotos.bolillos sizes="(min-width: 1120px) 340px, (min-width: 700px) 45vw, 100vw"}}
+            <div><h3>{{t.pan.bolillo}}</h3><p>{{t.pan.bolilloFoto}}</p></div>
+          </li>
+        </ul>
         <ul class="lista-productos">
-          <li><span class="producto">{{t.pan.bolillo}}</span><span class="detalle">{{t.pan.bolilloD}}</span></li>
           <li><span class="producto">{{t.pan.telera}}</span><span class="detalle">{{t.pan.teleraD}}</span></li>
         </ul>
       </div>
@@ -61,12 +66,12 @@
       <div class="contenedor">
         <header class="titulo"><h2 id="galeria-titulo">{{t.galeria.titulo}}</h2><span class="adorno" aria-hidden="true"></span></header>
         <div class="galeria">
+          <figure class="aparecer">{{img concha-con-leche alt=fotos.conchaLeche sizes="(min-width: 1120px) 350px, (min-width: 600px) 45vw, 100vw"}}<figcaption>{{t.fotos.conchaLeche}}</figcaption></figure>
           <figure class="aparecer">{{img pan-de-muerto-ajonjoli alt=fotos.muertoAjonjoli sizes="(min-width: 1120px) 350px, (min-width: 600px) 45vw, 100vw"}}<figcaption>{{t.fotos.muertoAjonjoli}}</figcaption></figure>
           <figure class="aparecer">{{img pan-de-muerto-concha alt=fotos.muertoConcha sizes="(min-width: 1120px) 350px, (min-width: 600px) 45vw, 100vw"}}<figcaption>{{t.fotos.muertoConcha}}</figcaption></figure>
+          <figure class="aparecer">{{img tienda-pan-congeladores alt=fotos.tiendaPan sizes="(min-width: 1120px) 350px, (min-width: 600px) 45vw, 100vw"}}<figcaption>{{t.fotos.tiendaPan}}</figcaption></figure>
           <figure class="aparecer">{{img galletas-mermelada alt=fotos.galletasMermelada sizes="(min-width: 1120px) 350px, (min-width: 600px) 45vw, 100vw"}}<figcaption>{{t.fotos.galletasMermelada}}</figcaption></figure>
           <figure class="aparecer">{{img pan-de-muerto-cerca alt=fotos.muertoCerca sizes="(min-width: 1120px) 350px, (min-width: 600px) 45vw, 100vw"}}<figcaption>{{t.fotos.muertoCerca}}</figcaption></figure>
-          <figure class="aparecer">{{img conchas-bolsa alt=fotos.conchasBolsa sizes="(min-width: 1120px) 350px, (min-width: 600px) 45vw, 100vw"}}<figcaption>{{t.fotos.conchasBolsa}}</figcaption></figure>
-          <figure class="aparecer">{{img conchas-estante alt=fotos.conchasEstante sizes="(min-width: 1120px) 350px, (min-width: 600px) 45vw, 100vw"}}<figcaption>{{t.fotos.conchasEstante}}</figcaption></figure>
         </div>
       </div>
     </section>

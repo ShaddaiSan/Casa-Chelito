@@ -692,7 +692,7 @@ address { font-style: normal; }
   gap: 20px;
 }
 
-.productos-foto li {
+.productos-foto > li {
   display: flex;
   flex-direction: column;
   background: var(--blanco);
@@ -702,13 +702,39 @@ address { font-style: normal; }
   border-bottom: 6px solid var(--amarillo);
 }
 
-.productos-foto li:nth-child(2n) { border-bottom-color: var(--verde); }
+.productos-foto > li:nth-child(2n) { border-bottom-color: var(--verde); }
 .productos-foto img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
 .productos-foto div { padding: 16px 20px 20px; }
 .productos-foto h3 { margin-bottom: 0.25em; }
 .productos-foto p { margin: 0; }
-.seccion.blanca .productos-foto li { background: var(--rosa-claro); }
+.seccion.blanca .productos-foto > li { background: var(--rosa-claro); }
 
 @media (min-width: 900px) {
   .productos-foto:has(> li:only-child) { grid-template-columns: minmax(0, 560px); justify-content: center; }
+}
+
+/* Foto a la derecha en escritorio */
+@media (min-width: 761px) {
+  .temporada.invertida > picture { order: 2; }
+  .temporada.invertida .foto-temporada { transform: rotate(1.5deg); }
+}
+
+/* Categorías de abarrotes y tarjetas sin foto */
+.productos-foto ul { margin: 0.25em 0 0; padding-left: 1.2em; }
+.productos-foto .ilustracion {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 4 / 3;
+  font-size: 5rem;
+  background: var(--rosa);
+}
+
+.sabores .tarjeta ul { columns: 1; }
+.sabores .tarjeta h3 { margin-bottom: 0.4em; }
+
+.tienda-fotos { margin-top: 40px; }
+.titulo-centrado { text-align: center; }
+
+@media (min-width: 900px) {
+  .productos-foto.categorias { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }

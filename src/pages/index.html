@@ -25,7 +25,7 @@
         </header>
         <div class="destacados">
           <article class="destacado pan aparecer">
-            {{img pan-de-muerto-ajonjoli alt=fotos.muertoAjonjoli class="foto-destacado" sizes="(min-width: 1120px) 340px, (min-width: 700px) 45vw, 100vw"}}
+            {{img concha-con-leche alt=fotos.conchaLeche class="foto-destacado" sizes="(min-width: 1120px) 340px, (min-width: 700px) 45vw, 100vw"}}
             <div class="destacado-cuerpo">
               <h3>{{t.inicio.panTitulo}}</h3>
               <p>{{t.inicio.panTexto}}</p>
@@ -33,7 +33,7 @@
             </div>
           </article>
           <article class="destacado paletas aparecer">
-            <div class="ilustracion" aria-hidden="true">🍭</div>
+            {{img paletas-fila alt=fotos.paletasFila class="foto-destacado" sizes="(min-width: 1120px) 340px, (min-width: 700px) 45vw, 100vw"}}
             <div class="destacado-cuerpo">
               <h3>{{t.inicio.paletasTitulo}}</h3>
               <p>{{t.inicio.paletasTexto}}</p>
@@ -41,7 +41,7 @@
             </div>
           </article>
           <article class="destacado abarrotes aparecer">
-            <div class="ilustracion" aria-hidden="true">🌶️</div>
+            {{img estante-abarrotes alt=fotos.estanteAbarrotes class="foto-destacado" sizes="(min-width: 1120px) 340px, (min-width: 700px) 45vw, 100vw"}}
             <div class="destacado-cuerpo">
               <h3>{{t.inicio.abarrotesTitulo}}</h3>
               <p>{{t.inicio.abarrotesTexto}}</p>
@@ -54,7 +54,19 @@
 
 {{> temporada}}
 
-    <section class="seccion blanca" aria-labelledby="porque-titulo">
+    <section class="seccion blanca temporada-banda" aria-labelledby="tienda-titulo">
+      <div class="contenedor temporada invertida">
+        {{img tienda-mostrador alt=fotos.tiendaMostrador class="foto-temporada" sizes="(min-width: 761px) 50vw, 100vw"}}
+        <div class="aparecer">
+          <p class="script">{{t.tienda.eslogan}}</p>
+          <h2 id="tienda-titulo">{{t.tienda.titulo}}</h2>
+          <p>{{t.tienda.texto}}</p>
+          <a class="boton verde" href="contacto.html">{{t.tienda.boton}}</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion" aria-labelledby="porque-titulo">
       <div class="contenedor">
         <header class="titulo">
           <h2 id="porque-titulo">{{t.inicio.porque}}</h2>

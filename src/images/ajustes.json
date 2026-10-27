@@ -1,5 +1,29 @@
 {
-  "_ayuda": "Ajustes opcionales por foto: brillo y contraste (1 = sin cambio).",
-  "galletas": { "brillo": 1.15, "contraste": 1.05 },
-  "galletas-mermelada": { "brillo": 1.18, "contraste": 1.05 }
+  "_ayuda": "Ajustes opcionales por foto: recorte [izq, arriba, der, abajo] en píxeles, brillo y contraste (1 = sin cambio).",
+  "galletas": {
+    "brillo": 1.15,
+    "contraste": 1.05
+  },
+  "galletas-mermelada": {
+    "brillo": 1.18,
+    "contraste": 1.05
+  },
+  "estante-abarrotes": {
+    "brillo": 1.3,
+    "contraste": 1.05
+  },
+  "tienda-pan-estantes": {
+    "recorte": [
+      420,
+      0,
+      2000,
+      1333
+    ]
+  },
+  "helado-suave": {
+    "brillo": 1.1
+  },
+  "concha-con-leche": {
+    "brillo": 1.1
+  }
 }
