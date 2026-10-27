@@ -3,105 +3,42 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Casa Chelito</title>
-  <meta name="description" content="Casa Chelito — tiendita mexicana en Montreal: pan artesanal, paletas, abarrotes, bebidas y antojitos.">
-  <link rel="icon" href="assets/logo.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@400;700;800&family=Pacifico&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
+  <title>Casa Chelito — Épicerie mexicaine à Montréal · Tiendita mexicana · Mexican grocery</title>
+  <meta name="description" content="Casa Chelito, épicerie mexicaine à Montréal : pain sucré artisanal, paletas faites à la main, épicerie, boissons et grignotines. Livraison sur commande par téléphone.">
+  <link rel="canonical" href="https://shaddaisan.github.io/Casa-Chelito/">
+  <link rel="alternate" hreflang="es" href="https://shaddaisan.github.io/Casa-Chelito/es/">
+  <link rel="alternate" hreflang="en" href="https://shaddaisan.github.io/Casa-Chelito/en/">
+  <link rel="alternate" hreflang="fr" href="https://shaddaisan.github.io/Casa-Chelito/fr/">
+  <link rel="alternate" hreflang="x-default" href="https://shaddaisan.github.io/Casa-Chelito/fr/">
+  <meta name="theme-color" content="#a64033">
+  <meta property="og:title" content="Casa Chelito">
+  <meta property="og:description" content="Casa Chelito, épicerie mexicaine à Montréal : pain sucré artisanal, paletas faites à la main, épicerie, boissons et grignotines. Livraison sur commande par téléphone.">
+  <meta property="og:image" content="https://shaddaisan.github.io/Casa-Chelito/assets/img/compartir.jpg">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <script>
+    // Lleva al idioma elegido antes o al del navegador. Sin JS se muestran los botones.
+    (function () {
+      var idiomas = ["es", "en", "fr"], l;
+      try { l = localStorage.getItem("idioma"); } catch (e) {}
+      if (idiomas.indexOf(l) === -1) l = (navigator.language || "").slice(0, 2);
+      if (idiomas.indexOf(l) === -1) l = "fr";
+      location.replace(l + "/");
+    })();
+  </script>
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body data-pagina="inicio">
-  <header id="encabezado"></header>
-  <div class="papel-picado" aria-hidden="true"></div>
-
-  <main>
-  <section class="heroe">
-    <div class="contenedor">
-      <div>
-        <p class="script" data-i18n="inicio.eslogan"></p>
-        <h1 data-i18n="inicio.titulo"></h1>
-        <p class="lead" data-i18n="inicio.lead"></p>
-        <div class="acciones">
-          <a class="boton" href="pan.html">🍞 <span data-i18n="inicio.verPan"></span></a>
-          <a class="boton verde" href="paletas.html">🍭 <span data-i18n="inicio.verPaletas"></span></a>
-        </div>
-      </div>
-      <img class="logo-grande" src="assets/logo.png" alt="Casa Chelito — cuisine mexicaine" width="420" height="420">
-    </div>
-  </section>
-
-  <section class="seccion">
-    <div class="contenedor">
-      <div class="titulo">
-        <h2 data-i18n="inicio.especialidades"></h2>
-        <p data-i18n="inicio.especialidadesTexto"></p>
-        <span class="adorno"></span>
-      </div>
-      <div class="destacados">
-        <article class="destacado pan">
-          <img class="foto-destacado" src="assets/fotos/conchas-estante.webp" srcset="assets/fotos/conchas-estante-600.webp 600w, assets/fotos/conchas-estante.webp 1200w" sizes="(max-width: 760px) 100vw, 50vw" width="1200" height="800" loading="lazy" alt="" data-i18n-alt="fotos.conchasEstante">
-          <h3 data-i18n="inicio.panTitulo"></h3>
-          <p data-i18n="inicio.panTexto"></p>
-          <a class="boton claro" href="pan.html" data-i18n="inicio.verMas"></a>
-        </article>
-        <article class="destacado paletas">
-          <div class="icono">🍭</div>
-          <h3 data-i18n="inicio.paletasTitulo"></h3>
-          <p data-i18n="inicio.paletasTexto"></p>
-          <a class="boton claro" href="paletas.html" data-i18n="inicio.verMas"></a>
-        </article>
-        <article class="destacado abarrotes">
-          <div class="icono">🌶️</div>
-          <h3 data-i18n="inicio.abarrotesTitulo"></h3>
-          <p data-i18n="inicio.abarrotesTexto"></p>
-          <a class="boton claro" href="abarrotes.html" data-i18n="inicio.verMas"></a>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="seccion temporada-banda">
-    <div class="contenedor temporada">
-      <img class="foto-temporada" src="assets/fotos/pan-de-muerto-horneado.webp" srcset="assets/fotos/pan-de-muerto-horneado-600.webp 600w, assets/fotos/pan-de-muerto-horneado.webp 1200w" sizes="(max-width: 760px) 100vw, 50vw" width="1200" height="800" loading="lazy" alt="" data-i18n-alt="fotos.muertoHorneado">
-      <div>
-        <p class="script" data-i18n="temporada.eslogan"></p>
-        <h2 data-i18n="temporada.titulo"></h2>
-        <p data-i18n="temporada.texto"></p>
-        <a class="boton" data-tel-link href="#">📞 <span data-i18n="temporada.boton"></span></a>
-      </div>
-    </div>
-  </section>
-
-  <section class="seccion blanca">
-    <div class="contenedor">
-      <div class="titulo">
-        <h2 data-i18n="inicio.porque"></h2>
-        <span class="adorno"></span>
-      </div>
-      <div class="rejilla">
-        <div class="tarjeta"><div class="icono">👩‍🍳</div><h3 data-i18n="inicio.razon1Titulo"></h3><p data-i18n="inicio.razon1"></p></div>
-        <div class="tarjeta"><div class="icono">🇲🇽</div><h3 data-i18n="inicio.razon2Titulo"></h3><p data-i18n="inicio.razon2"></p></div>
-        <div class="tarjeta"><div class="icono">🏠</div><h3 data-i18n="inicio.razon3Titulo"></h3><p data-i18n="inicio.razon3"></p></div>
-        <div class="tarjeta"><div class="icono">🛵</div><h3 data-i18n="inicio.razon4Titulo"></h3><p data-i18n="inicio.razon4"></p></div>
-      </div>
-    </div>
-  </section>
+<body class="raiz">
+  <main class="elegir-idioma">
+    <img src="assets/img/logo-240.png" width="240" height="240" alt="Casa Chelito — cuisine mexicaine">
+    <h1 class="visualmente-oculto">Casa Chelito</h1>
+    <nav aria-label="Language / Langue / Idioma">
+      <ul>
+        <li><a class="boton" href="fr/" hreflang="fr" lang="fr">Français</a></li>
+        <li><a class="boton verde" href="en/" hreflang="en" lang="en">English</a></li>
+        <li><a class="boton claro" href="es/" hreflang="es" lang="es">Español</a></li>
+      </ul>
+    </nav>
   </main>
-
-  <section class="banda-pedido">
-    <div class="contenedor">
-      <h2 data-i18n="pedido.titulo"></h2>
-      <p data-i18n="pedido.texto"></p>
-      <a class="telefono" data-telefono href="#"></a><br>
-      <a class="boton claro" data-tel-link href="#">📞 <span data-i18n="pedido.boton"></span></a>
-    </div>
-  </section>
-
-  <div class="papel-picado" aria-hidden="true"></div>
-  <footer id="pie"></footer>
-  <script src="js/config.js"></script>
-  <script src="js/i18n.js"></script>
-  <script src="js/main.js"></script>
 </body>
 </html>

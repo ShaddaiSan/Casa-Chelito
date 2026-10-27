@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Casa Chelito — Épicerie mexicaine à Montréal · Tiendita mexicana · Mexican grocery</title>
+  <meta name="description" content="{{t.meta.descInicio}}">
+  <link rel="canonical" href="{{c.url}}">
+  {{hreflang}}
+  <meta name="theme-color" content="#a64033">
+  <meta property="og:title" content="Casa Chelito">
+  <meta property="og:description" content="{{t.meta.descInicio}}">
+  <meta property="og:image" content="{{c.url}}assets/img/compartir.jpg">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <script>
+    // Lleva al idioma elegido antes o al del navegador. Sin JS se muestran los botones.
+    (function () {
+      var idiomas = ["es", "en", "fr"], l;
+      try { l = localStorage.getItem("idioma"); } catch (e) {}
+      if (idiomas.indexOf(l) === -1) l = (navigator.language || "").slice(0, 2);
+      if (idiomas.indexOf(l) === -1) l = "fr";
+      location.replace(l + "/");
+    })();
+  </script>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="raiz">
+  <main class="elegir-idioma">
+    <img src="assets/img/logo-240.png" width="240" height="240" alt="Casa Chelito — cuisine mexicaine">
+    <h1 class="visualmente-oculto">Casa Chelito</h1>
+    <nav aria-label="Language / Langue / Idioma">
+      <ul>
+        <li><a class="boton" href="fr/" hreflang="fr" lang="fr">Français</a></li>
+        <li><a class="boton verde" href="en/" hreflang="en" lang="en">English</a></li>
+        <li><a class="boton claro" href="es/" hreflang="es" lang="es">Español</a></li>
+      </ul>
+    </nav>
+  </main>
+</body>
+</html>

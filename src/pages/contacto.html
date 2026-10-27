@@ -1,0 +1,37 @@
+    <section class="encabezado-pagina" aria-labelledby="pagina-titulo">
+      <div class="contenedor">
+        <p class="script">{{t.contacto.eslogan}}</p>
+        <h1 id="pagina-titulo">{{t.contacto.titulo}}</h1>
+        <p class="lead">{{t.contacto.lead}}</p>
+      </div>
+    </section>
+
+    <section class="seccion">
+      <div class="contenedor contacto-rejilla">
+        <article class="tarjeta" aria-labelledby="como-pedir">
+          <h2 id="como-pedir">{{t.contacto.comoPedir}}</h2>
+          <ol class="pasos">
+            <li>{{t.contacto.paso1}}</li>
+            <li>{{t.contacto.paso2}}</li>
+            <li>{{t.contacto.paso3}}</li>
+            <li>{{t.contacto.paso4}}</li>
+          </ol>
+          <p><a class="boton" href="tel:{{c.telefono_link}}">{{c.telefono}}</a></p>
+          <p><strong>{{t.contacto.soloLlamada}}</strong></p>
+        </article>
+        <article class="tarjeta" aria-labelledby="visitanos">
+          <h2 id="visitanos">{{t.contacto.visitanos}}</h2>
+          <address><p>{{c.direccion}}</p></address>
+          <h3>{{t.contacto.horario}}</h3>
+          <table class="horario">
+            <caption class="visualmente-oculto">{{t.contacto.horario}}</caption>
+            <tr><th scope="row">{{t.contacto.lunVie}}</th><td>{{t.contacto.horarioPendiente}}</td></tr>
+            <tr><th scope="row">{{t.contacto.sabado}}</th><td>{{t.contacto.horarioPendiente}}</td></tr>
+            <tr><th scope="row">{{t.contacto.domingo}}</th><td>{{t.contacto.horarioPendiente}}</td></tr>
+          </table>
+        </article>
+      </div>
+      <div class="contenedor mapa-contenedor">
+        <iframe class="mapa" src="{{c.mapa}}" title="{{t.contacto.mapa}}" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </section>

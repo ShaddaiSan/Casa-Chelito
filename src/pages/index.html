@@ -1,0 +1,70 @@
+    <section class="heroe" aria-labelledby="heroe-titulo">
+      <div class="contenedor">
+        <div class="heroe-texto">
+          <p class="script">{{t.inicio.eslogan}}</p>
+          <h1 id="heroe-titulo">{{t.inicio.titulo}}</h1>
+          <p class="lead">{{t.inicio.lead}}</p>
+          <div class="acciones">
+            <a class="boton" href="pan.html">{{t.inicio.verPan}}</a>
+            <a class="boton verde" href="paletas.html">{{t.inicio.verPaletas}}</a>
+          </div>
+        </div>
+        <picture class="logo-grande">
+          <source type="image/webp" srcset="{{base}}assets/img/logo-240.webp 240w, {{base}}assets/img/logo-500.webp 500w" sizes="(min-width: 761px) 420px, 260px">
+          <img src="{{base}}assets/img/logo-500.png" srcset="{{base}}assets/img/logo-240.png 240w, {{base}}assets/img/logo-500.png 500w" sizes="(min-width: 761px) 420px, 260px" width="500" height="500" alt="{{t.inicio.logoAlt}}" fetchpriority="high">
+        </picture>
+      </div>
+    </section>
+
+    <section class="seccion" aria-labelledby="especialidades-titulo">
+      <div class="contenedor">
+        <header class="titulo">
+          <h2 id="especialidades-titulo">{{t.inicio.especialidades}}</h2>
+          <p>{{t.inicio.especialidadesTexto}}</p>
+          <span class="adorno" aria-hidden="true"></span>
+        </header>
+        <div class="destacados">
+          <article class="destacado pan aparecer">
+            {{img pan-de-muerto-ajonjoli alt=fotos.muertoAjonjoli class="foto-destacado" sizes="(min-width: 1120px) 340px, (min-width: 700px) 45vw, 100vw"}}
+            <div class="destacado-cuerpo">
+              <h3>{{t.inicio.panTitulo}}</h3>
+              <p>{{t.inicio.panTexto}}</p>
+              <a class="boton claro" href="pan.html">{{t.inicio.verMas}}<span class="visualmente-oculto"> — {{t.inicio.panTitulo}}</span></a>
+            </div>
+          </article>
+          <article class="destacado paletas aparecer">
+            <div class="ilustracion" aria-hidden="true">🍭</div>
+            <div class="destacado-cuerpo">
+              <h3>{{t.inicio.paletasTitulo}}</h3>
+              <p>{{t.inicio.paletasTexto}}</p>
+              <a class="boton claro" href="paletas.html">{{t.inicio.verMas}}<span class="visualmente-oculto"> — {{t.inicio.paletasTitulo}}</span></a>
+            </div>
+          </article>
+          <article class="destacado abarrotes aparecer">
+            <div class="ilustracion" aria-hidden="true">🌶️</div>
+            <div class="destacado-cuerpo">
+              <h3>{{t.inicio.abarrotesTitulo}}</h3>
+              <p>{{t.inicio.abarrotesTexto}}</p>
+              <a class="boton claro" href="abarrotes.html">{{t.inicio.verMas}}<span class="visualmente-oculto"> — {{t.inicio.abarrotesTitulo}}</span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+{{> temporada}}
+
+    <section class="seccion blanca" aria-labelledby="porque-titulo">
+      <div class="contenedor">
+        <header class="titulo">
+          <h2 id="porque-titulo">{{t.inicio.porque}}</h2>
+          <span class="adorno" aria-hidden="true"></span>
+        </header>
+        <ul class="rejilla sin-lista">
+          <li class="tarjeta aparecer"><span class="icono" aria-hidden="true">👩‍🍳</span><h3>{{t.inicio.razon1Titulo}}</h3><p>{{t.inicio.razon1}}</p></li>
+          <li class="tarjeta aparecer"><span class="icono" aria-hidden="true">🇲🇽</span><h3>{{t.inicio.razon2Titulo}}</h3><p>{{t.inicio.razon2}}</p></li>
+          <li class="tarjeta aparecer"><span class="icono" aria-hidden="true">🏠</span><h3>{{t.inicio.razon3Titulo}}</h3><p>{{t.inicio.razon3}}</p></li>
+          <li class="tarjeta aparecer"><span class="icono" aria-hidden="true">🛵</span><h3>{{t.inicio.razon4Titulo}}</h3><p>{{t.inicio.razon4}}</p></li>
+        </ul>
+      </div>
+    </section>

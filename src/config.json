@@ -1,0 +1,15 @@
+{
+  "nombre": "Casa Chelito",
+  "url": "https://shaddaisan.github.io/Casa-Chelito/",
+  "telefono": "+1 (514) 000-0000",
+  "telefono_link": "+15140000000",
+  "telefono_confirmado": false,
+  "direccion": "Montréal, QC",
+  "ciudad": "Montréal",
+  "region": "QC",
+  "pais": "CA",
+  "mapa": "https://www.google.com/maps?q=Montreal,QC&output=embed",
+  "instagram": "",
+  "facebook": "",
+  "idioma_por_defecto": "fr"
+}

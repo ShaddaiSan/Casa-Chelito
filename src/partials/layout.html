@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="{{lang}}" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{titulo}}</title>
+  <meta name="description" content="{{descripcion}}">
+  <link rel="canonical" href="{{canonica}}">
+  {{hreflang}}
+  <meta name="theme-color" content="#a64033">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Casa Chelito">
+  <meta property="og:title" content="{{titulo}}">
+  <meta property="og:description" content="{{descripcion}}">
+  <meta property="og:url" content="{{canonica}}">
+  <meta property="og:image" content="{{c.url}}assets/img/compartir.jpg">
+  <meta property="og:locale" content="{{locale}}">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" href="{{base}}favicon.png">
+  <link rel="apple-touch-icon" href="{{base}}apple-touch-icon.png">
+  <link rel="preload" href="{{base}}assets/fonts/lilita-one-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{base}}assets/fonts/nunito-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="{{base}}assets/css/styles.css">
+  <script>document.documentElement.className = "js";</script>
+  <script src="{{base}}assets/js/main.js" defer></script>
+  {{jsonld}}
+</head>
+<body>
+  <a class="saltar" href="#contenido">{{t.saltar}}</a>
+  <header class="encabezado">
+    <div class="contenedor">
+      <a class="marca" href="./" aria-label="Casa Chelito — {{t.nav.inicio}}">
+        <picture>
+          <source type="image/webp" srcset="{{base}}assets/img/logo-112.webp">
+          <img src="{{base}}assets/img/logo-112.png" width="56" height="56" alt="">
+        </picture>
+        <span>Casa Chelito</span>
+      </a>
+      <button class="boton-menu" type="button" aria-expanded="false" aria-controls="navegacion">
+        <span class="visualmente-oculto">{{t.nav.abrir}}</span>
+        <span class="hamburguesa" aria-hidden="true"></span>
+      </button>
+      <nav class="navegacion" id="navegacion" aria-label="{{t.nav.principal}}">
+        <ul class="menu">
+          {{nav}}
+        </ul>
+        <div class="idiomas" role="group" aria-label="{{t.nav.idioma}}">{{idiomas}}</div>
+      </nav>
+    </div>
+  </header>
+  <div class="papel-picado" aria-hidden="true"></div>
+
+  <main id="contenido">
+{{contenido}}
+  </main>
+{{pedido}}
+  <div class="papel-picado" aria-hidden="true"></div>
+  <footer class="pie">
+    <div class="contenedor">
+      <div>
+        <p class="pie-titulo">Casa Chelito</p>
+        <p>{{t.pie.texto}}</p>
+      </div>
+      <nav aria-label="{{t.pie.paginas}}">
+        <p class="pie-titulo">{{t.pie.paginas}}</p>
+        <ul>
+          {{nav}}
+        </ul>
+      </nav>
+      <div>
+        <p class="pie-titulo">{{t.pie.contacto}}</p>
+        <address>
+          <ul>
+            <li><a href="tel:{{c.telefono_link}}">{{c.telefono}}</a></li>
+            <li>{{c.direccion}}</li>
+            {{redes}}
+          </ul>
+        </address>
+      </div>
+      <p class="derechos">© {{anio}} Casa Chelito · {{t.pie.derechos}}</p>
+    </div>
+  </footer>
+
+  <a class="llamar-flotante" href="tel:{{c.telefono_link}}" aria-label="{{t.llamar}} {{c.telefono}}">
+    <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.6a1 1 0 0 1-.25 1z"/></svg>
+  </a>
+</body>
+</html>

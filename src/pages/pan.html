@@ -1,0 +1,59 @@
+    <section class="encabezado-pagina" aria-labelledby="pagina-titulo">
+      <div class="contenedor">
+        <p class="script">{{t.pan.eslogan}}</p>
+        <h1 id="pagina-titulo">{{t.pan.titulo}}</h1>
+        <p class="lead">{{t.pan.lead}}</p>
+      </div>
+    </section>
+
+{{> temporada}}
+
+    <section class="seccion" aria-labelledby="pan-dulce">
+      <div class="contenedor">
+        <header class="titulo"><h2 id="pan-dulce">{{t.pan.dulce}}</h2><span class="adorno" aria-hidden="true"></span></header>
+        <ul class="lista-productos">
+          <li><span class="producto">{{t.pan.concha}}</span><span class="detalle">{{t.pan.conchaD}}</span></li>
+          <li><span class="producto">{{t.pan.cuernito}}</span><span class="detalle">{{t.pan.cuernitoD}}</span></li>
+          <li><span class="producto">{{t.pan.oreja}}</span><span class="detalle">{{t.pan.orejaD}}</span></li>
+          <li><span class="producto">{{t.pan.polvoron}}</span><span class="detalle">{{t.pan.polvoronD}}</span></li>
+          <li><span class="producto">{{t.pan.marranito}}</span><span class="detalle">{{t.pan.marranitoD}}</span></li>
+          <li><span class="producto">{{t.pan.dona}}</span><span class="detalle">{{t.pan.donaD}}</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="seccion blanca" aria-labelledby="pan-salado">
+      <div class="contenedor">
+        <header class="titulo"><h2 id="pan-salado">{{t.pan.salado}}</h2><span class="adorno" aria-hidden="true"></span></header>
+        <ul class="lista-productos">
+          <li><span class="producto">{{t.pan.bolillo}}</span><span class="detalle">{{t.pan.bolilloD}}</span></li>
+          <li><span class="producto">{{t.pan.telera}}</span><span class="detalle">{{t.pan.teleraD}}</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="seccion" aria-labelledby="pan-temporada">
+      <div class="contenedor">
+        <header class="titulo"><h2 id="pan-temporada">{{t.pan.temporada}}</h2><span class="adorno" aria-hidden="true"></span></header>
+        <ul class="lista-productos">
+          <li><span class="producto">{{t.pan.muerto}}</span><span class="detalle">{{t.pan.muertoD}}</span></li>
+          <li><span class="producto">{{t.pan.rosca}}</span><span class="detalle">{{t.pan.roscaD}}</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="seccion blanca" aria-labelledby="galeria-titulo">
+      <div class="contenedor">
+        <header class="titulo"><h2 id="galeria-titulo">{{t.galeria.titulo}}</h2><span class="adorno" aria-hidden="true"></span></header>
+        <div class="galeria">
+          <figure class="aparecer">{{img pan-de-muerto-ajonjoli alt=fotos.muertoAjonjoli sizes="(min-width: 1120px) 270px, (min-width: 600px) 45vw, 100vw"}}<figcaption>{{t.fotos.muertoAjonjoli}}</figcaption></figure>
+          <figure class="aparecer">{{img pan-de-muerto-cerca alt=fotos.muertoCerca sizes="(min-width: 1120px) 270px, (min-width: 600px) 45vw, 100vw"}}<figcaption>{{t.fotos.muertoCerca}}</figcaption></figure>
+          <figure class="aparecer">{{img conchas-bolsa alt=fotos.conchasBolsa sizes="(min-width: 1120px) 270px, (min-width: 600px) 45vw, 100vw"}}<figcaption>{{t.fotos.conchasBolsa}}</figcaption></figure>
+          <figure class="aparecer">{{img conchas-estante alt=fotos.conchasEstante sizes="(min-width: 1120px) 270px, (min-width: 600px) 45vw, 100vw"}}<figcaption>{{t.fotos.conchasEstante}}</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion nota">
+      <div class="contenedor"><p>{{t.pan.nota}}</p></div>
+    </section>

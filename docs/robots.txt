@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://shaddaisan.github.io/Casa-Chelito/sitemap.xml
