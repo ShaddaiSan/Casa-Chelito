@@ -8,6 +8,7 @@ const { chromium } = require('playwright');
   for (const { html, png } of trabajos) {
     await pagina.goto(html, { waitUntil: 'load' });
     await pagina.evaluate(() => document.fonts.ready);
+    await pagina.evaluate(() => window.ajustar && window.ajustar());
     await pagina.locator('.lienzo').screenshot({ path: png });
   }
   await navegador.close();

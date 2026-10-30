@@ -160,21 +160,24 @@ CSS_FLYER = f"""
               radial-gradient(ellipse at 50% 55%, rgba(0,0,0,0) 55%, rgba(0,0,0,.35) 100%); }}
 .logo-flyer {{ position: absolute; right: 40px; top: 40px; width: 210px; height: 210px; border-radius: 50%;
   border: 6px solid #fffaf6; box-shadow: 0 8px 24px rgba(0,0,0,.45); }}
-.cabeza {{ position: absolute; left: 70px; top: 50px; width: 760px; transform: rotate(-6deg); transform-origin: left top; }}
-.linea1 {{ font-family: "Kaushan Script"; color: #fff; font-size: 116px; line-height: 1; margin-left: 60px;
+.cabeza {{ position: absolute; left: 60px; top: 56px; width: 660px; transform: rotate(-6deg); transform-origin: left top; }}
+.linea1 {{ font-family: "Kaushan Script"; color: #fff; font-size: 116px; line-height: 1.1; margin-left: 60px; white-space: nowrap;
   text-shadow: 0 6px 18px rgba(0,0,0,.6); }}
-.linea2 {{ font-family: "Kaushan Script"; color: #f4b731; font-size: 200px; line-height: .9; margin-top: -6px;
+.linea2 {{ font-family: "Kaushan Script"; color: #f4b731; font-size: 200px; line-height: 1.05; margin-top: -24px; white-space: nowrap; padding-right: 10px;
   text-shadow: 0 8px 22px rgba(0,0,0,.55); }}
 .bajada {{ font-family: "Permanent Marker"; color: #fff; font-size: 40px; white-space: nowrap; margin-top: 10px; margin-left: 20px;
-  text-shadow: 0 3px 10px rgba(0,0,0,.7); position: relative; display: inline-block; }}
+  text-shadow: 0 3px 10px rgba(0,0,0,.7); position: relative; display: block; }}
 .subrayado {{ position: absolute; left: 34%; bottom: -26px; width: 300px; height: 34px; }}
 .chispas {{ position: absolute; inset: 0; pointer-events: none; }}
-.banda {{ position: absolute; left: 60px; bottom: 250px; transform: rotate(-3deg); transform-origin: left center;
+.abajo-flyer {{ position: absolute; left: 60px; right: 60px; display: flex; flex-direction: column;
+  align-items: flex-start; gap: 26px; }}
+.abajo-flyer .chips-color span {{ font-size: 40px; }}
+.banda {{ position: relative; transform: rotate(-3deg); transform-origin: left center; margin: 6px 0 10px;
   padding: 26px 70px 30px 56px; }}
 .banda svg {{ position: absolute; inset: 0; width: 100%; height: 100%; filter: drop-shadow(0 6px 10px rgba(0,0,0,.4)); }}
 .banda span {{ position: relative; font-family: "Caveat Brush"; color: #fff; font-size: 56px; line-height: 1;
   white-space: nowrap; }}
-.pie-flyer {{ position: absolute; left: 70px; right: 70px; bottom: 92px; display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }}
+.pie-flyer {{ display: flex; flex-direction: column; gap: 12px; align-items: flex-start; }}
 .pie-flyer .fr {{ background: #fffaf6; color: #47704c; font-weight: 800; font-size: 28px; padding: 10px 26px; border-radius: 999px;
   box-shadow: 0 4px 12px rgba(0,0,0,.3); }}
 .bordado {{ position: absolute; left: 0; right: 0; bottom: 0; height: 66px; }}
@@ -186,7 +189,7 @@ GOTA = "M0,0 C9,-2 16,14 11,78 C10,90 -10,90 -11,78 C-15,24 -8,2 0,0 Z"
 
 def chispas(lista):
     """Salpicaduras de pincel: (x, y, ángulo, escala, color)."""
-    return '<svg class="chispas" viewBox="0 0 1080 1350">' + "".join(
+    return '<svg class="chispas" viewBox="0 0 1080 1350" preserveAspectRatio="xMidYMin meet">' + "".join(
         f'<path d="{GOTA}" fill="{c}" transform="translate({x} {y}) rotate({r}) scale({e})"/>'
         for x, y, r, e, c in lista) + "</svg>"
 
@@ -214,7 +217,19 @@ BANDA = """<svg viewBox="0 0 1000 120" preserveAspectRatio="none">
 </svg>"""
 
 
-def flyer(nombre_foto, pos, linea1, linea2, bajada, banda, fr, cta=True, salpicaduras=None, subrayado=True):
+AJUSTE = """<script>
+// Achica cada línea del titular hasta que quepa en su ancho (sin chocar con el logo).
+window.ajustar = function () {
+  document.querySelectorAll(".linea1, .linea2, .bajada").forEach(function (el) {
+    var tam = parseFloat(getComputedStyle(el).fontSize);
+    while (el.scrollWidth > el.clientWidth && tam > 30) { tam -= 3; el.style.fontSize = tam + "px"; }
+  });
+};
+</script>"""
+
+
+def flyer(nombre_foto, pos, linea1, linea2, bajada, banda, fr, cta=True, salpicaduras=None, subrayado=True,
+          chips=None, tam2=200, alto=1350, subir=0):
     """Estilo flyer: titular de pincel, salpicaduras, banda verde y borde bordado."""
     salpicaduras = salpicaduras or [
         (70, 150, -60, .8, "#f4b731"), (52, 250, -95, .75, "#2f8a43"), (60, 345, -125, .65, "#c8321e"),
@@ -222,24 +237,67 @@ def flyer(nombre_foto, pos, linea1, linea2, bajada, banda, fr, cta=True, salpica
     sub = ('<svg class="subrayado" viewBox="0 0 300 34"><path d="M4,24 C80,10 200,6 296,14 C200,16 90,22 10,32 Z" '
            'fill="#f4b731"/></svg>') if subrayado else ""
     cta_html = '<div class="pastilla cta">Comenta <b>CHELITO</b> para más info</div>' if cta else ""
+    chips_html = ('<div class="chips-color">' + "".join(f"<span>{c}</span>" for c in chips) + "</div>") if chips else ""
     return (f'<!doctype html><html><head><meta charset="utf-8"><style>{CSS}{CSS_FLYER}</style></head><body>'
-            f'<div class="lienzo" style="width:1080px;height:1350px">'
+            f'<div class="lienzo" style="width:1080px;height:{alto}px">'
             f'<img class="foto" src="{foto(nombre_foto)}" style="object-position:{pos}">'
             f'<div class="velo"></div>{chispas(salpicaduras)}'
-            f'<div class="cabeza"><div class="linea1">{linea1}</div><div class="linea2">{linea2}</div>'
+            f'<div class="cabeza"><div class="linea1">{linea1}</div><div class="linea2" style="font-size:{tam2}px">{linea2}</div>'
             f'<div class="bajada">{bajada}{sub}</div></div>'
             f'<img class="logo-flyer" src="{LOGO}" alt="">'
+            f'<div class="abajo-flyer" style="bottom:{92 + subir}px">{chips_html}'
             f'<div class="banda">{BANDA}<span>{banda}</span></div>'
-            f'<div class="pie-flyer"><div class="fr">FR · {fr}</div>{cta_html}</div>'
-            f'{TRAZOS}{BORDADO}</div></body></html>')
+            f'<div class="pie-flyer"><div class="fr">FR · {fr}</div>{cta_html}</div></div>'
+            f'{TRAZOS}{BORDADO}</div>{AJUSTE}</body></html>')
 
 
 def flyers():
+    agua = ["Mango", "Fresa", "Tamarindo", "Piña", "Limón"]
+    crema = ["Coco", "Fresa", "Rompope", "Nuez", "Pistache", "Vainilla", "Oreo", "Chocolate", "Mango"]
+    horario = "Lunes a sábado 10–20 h · Domingo 10–19 h"
+    domicilio = dict(linea1="Te lo llevamos", linea2="a Casa", bajada="LUN A SÁB 10–20 H · DOM 10–19 H",
+                     banda=f"Llámanos: {TELEFONO}", fr="On livre ! Appelle-nous")
     return {
-        "flyer-gansito": flyer("gansito-marias", "4% 75%", "El antojo de", "Siempre",
-                               "EL SABOR DE MÉXICO EN CADA BOCADO",
-                               "Si comiste esto de niño, eres de los nuestros",
-                               "Les collations de notre enfance"),
+        # Jue 5 nov · carrusel de paletas
+        "1-paletas-1-portada": flyer("paletas-fila", "50% 62%", "Bien", "Fresquecitas",
+                                     "PALETAS DE AGUA, CHAMOY Y CREMA", "Desliza y elige tu sabor",
+                                     "Paletas artisanales : eau, chamoy ou crème", tam2=180),
+        "1-paletas-2-agua": flyer("paleta-verde", "45% 55%", "Paletas de", "Agua", "FRUTALES Y REFRESCANTES",
+                                  "Hechas con fruta", "À base d'eau, fruitées", chips=agua),
+        "1-paletas-3-chamoy": flyer("paletas-colores", "55% 60%", "Con", "Chamoy", "DULCE, SALADITO Y ENCHILADO",
+                                    "El antojo perfecto", "Avec chamoy : sucré, salé, piquant", chips=agua),
+        "1-paletas-4-crema": flyer("paletas-sobre-congelador", "40% 55%", "Paletas de", "Crema",
+                                   "CREMOSITAS Y DELICIOSAS", "Para los golosos", "À la crème, onctueuses",
+                                   chips=crema),
+        "1-paletas-5-cierre": flyer("paletas-acomodadas", "55% 55%", "¿Cuál vas a", "Probar?",
+                                    "7351 RUE JARRY EST, MONTRÉAL", horario, "Laquelle tu essaies ?"),
+        # Jue 12 nov · carrusel de conchas
+        "2-conchas-1-portada": flyer("pan-de-muerto-concha", "50% 45%", "¿Cuál agarras", "Primero?",
+                                     "PAN MEXICANO EN MONTREAL", "Desliza y elige tu favorita",
+                                     "Laquelle en premier ?"),
+        "2-conchas-2-clasica": flyer("concha-con-leche", "62% 75%", "La de", "Siempre", "CONCHA CLÁSICA",
+                                     "Con cafecito o con leche, como en casa", "La concha classique"),
+        "2-conchas-3-color": flyer("concha-rosa", "35% 50%", "Concha de", "Color", "SUAVECITA POR DENTRO",
+                                   "Para endulzar tu tarde", "Concha colorée"),
+        "2-conchas-4-pan-de-muerto": flyer("pan-de-muerto-concha", "50% 55%", "Pan de muerto", "de Concha",
+                                           "LO MEJOR DE LOS DOS", "Solo por temporada",
+                                           "Pan de muerto avec croûte de concha", tam2=170),
+        "2-conchas-5-cierre": flyer("tienda-pan-estantes", "100% 55%", "¿Cuál es tu", "Favorita?",
+                                    "TE ESPERAMOS EN LA TIENDITA", "Pan mexicano todos los días",
+                                    "Laquelle est ta préférée ?"),
+        # Jue 19 nov · pedidos a domicilio
+        "3-domicilio-feed": flyer("tienda-mostrador", "50% 60%", **domicilio),
+        "3-domicilio-historia": flyer("tienda-mostrador", "45% 55%", alto=1920, subir=330, **domicilio),
+        # Banco
+        "4-gansito": flyer("gansito-marias", "4% 75%", "El antojo de", "Siempre",
+                           "EL SABOR DE MÉXICO EN CADA BOCADO", "Si comiste esto de niño, eres de los nuestros",
+                           "Les collations de notre enfance"),
+        "4-carrito": flyer("carrito-paletero", "62% 45%", "El carrito", "Paletero", "TAMBIÉN EMIGRÓ A MONTREAL",
+                           "¿Cuál era tu paleta de siempre?", "Le chariot à paletas, comme au Mexique", tam2=180),
+        "4-fabuloso": flyer("hogar-limpieza", "55% 55%", "Huele a", "Sábado", "COMO LA CASA DE MAMÁ",
+                            "Zote, Fabuloso y más, aquí en Montreal", "Les incontournables d'une maison mexicaine"),
+        "4-tamales": flyer("tamal", "50% 100%", "¡Hay", "Tamales!", "EN HOJA DE PLÁTANO CON SUS SALSAS",
+                           f"Apártalos al {TELEFONO}", "Il y a des tamales ! Appelle pour réserver"),
     }
 
 
@@ -317,7 +375,7 @@ def sueltas():
 def main():
     filtro = sys.argv[1] if len(sys.argv) > 1 else ""
     piezas = {}
-    for grupo in (carrusel_paletas, carrusel_conchas, livraison, sueltas, flyers):
+    for grupo in (flyers,):
         piezas.update(grupo())
     piezas = {k: v for k, v in piezas.items() if filtro in k}
     SALIDA.mkdir(parents=True, exist_ok=True)
