@@ -58,6 +58,31 @@ body {{ background: #222; }}
 .chips span {{ background: rgba(255,250,246,.96); color: #7a2e24; font-weight: 800; font-size: 32px;
   padding: 9px 22px; border-radius: 999px; box-shadow: 0 3px 10px rgba(0,0,0,.22); }}
 .chips small {{ font-size: 21px; font-weight: 700; color: #47704c; margin-left: 8px; }}
+.pastilla.cta {{ background: #e0a23b; color: #7a2e24; font-weight: 800; font-size: 32px; padding: 12px 28px; }}
+.pastilla.cta b {{ font-family: "Lilita One"; font-weight: 400; color: #a64033; letter-spacing: 1px; }}
+/* Estilo de impacto: titular grande con contorno, en colores de la marca */
+.impacto {{ position: absolute; left: 52px; right: 52px; bottom: 60px; display: flex; flex-direction: column;
+  align-items: flex-start; gap: 18px; }}
+.grande {{ font-family: "Lilita One"; line-height: .95; letter-spacing: 1px; transform: rotate(-3deg);
+  transform-origin: left bottom; margin-bottom: 14px;
+  text-shadow: -4px -4px 0 #7a2e24, 4px -4px 0 #7a2e24, -4px 4px 0 #7a2e24, 4px 4px 0 #7a2e24,
+    0 -5px 0 #7a2e24, 0 5px 0 #7a2e24, -5px 0 0 #7a2e24, 5px 0 0 #7a2e24, 10px 12px 0 rgba(122,46,36,.85); }}
+.cinta {{ display: inline-block; background: #a64033; color: #fffaf6; font-family: "Lilita One"; font-size: 46px;
+  padding: 10px 30px 6px; transform: rotate(-2deg); box-shadow: 6px 6px 0 #7a2e24; }}
+.cinta.mostaza {{ background: #e0a23b; color: #7a2e24; box-shadow: 6px 6px 0 #a64033; }}
+.cinta.verde {{ background: #47704c; box-shadow: 6px 6px 0 #2c4a30; }}
+.chips-color {{ display: flex; flex-wrap: wrap; gap: 14px; }}
+.chips-color span {{ font-family: "Lilita One"; font-size: 44px; color: #fff; padding: 10px 26px 6px;
+  border-radius: 999px; box-shadow: 4px 4px 0 rgba(0,0,0,.35); }}
+.chips-color span:nth-child(4n+1) {{ background: #a64033; transform: rotate(-2deg); }}
+.chips-color span:nth-child(4n+2) {{ background: #47704c; transform: rotate(1.5deg); }}
+.chips-color span:nth-child(4n+3) {{ background: #e9843e; transform: rotate(-1deg); }}
+.chips-color span:nth-child(4n+4) {{ background: #c25a7c; transform: rotate(2deg); }}
+.fr-nota {{ font-size: 28px; font-weight: 700; color: #fffaf6; background: rgba(28,10,6,.55);
+  padding: 6px 18px; border-radius: 999px; }}
+.numero-grande {{ position: absolute; left: 40px; top: 10px; font-family: "Lilita One"; font-size: 300px;
+  color: #e0a23b; line-height: 1; transform: rotate(-6deg);
+  text-shadow: -6px -6px 0 #7a2e24, 6px -6px 0 #7a2e24, -6px 6px 0 #7a2e24, 6px 6px 0 #7a2e24, 14px 16px 0 rgba(122,46,36,.85); }}
 .numero {{ position: absolute; left: 48px; top: 48px; width: 140px; height: 140px; border-radius: 50%;
   background: #fffaf6; color: #a64033; font-family: "Lilita One"; font-size: 100px;
   display: grid; place-items: center; box-shadow: 0 6px 20px rgba(0,0,0,.3); padding-top: 6px; }}
@@ -73,7 +98,7 @@ def sello():
     return f'<img class="sello" src="{LOGO}" alt="">'
 
 
-def publicacion(nombre_foto, pos, linea, titulo="", sub="", previa="", chips=None, numero=None, nota="",
+def publicacion(nombre_foto, pos, linea, titulo="", sub="", previa="", chips=None, numero=None, nota="", cta=False,
                 tamano=FEED, logo=True, abajo=52):
     """La foto manda: imagen limpia a pantalla completa y etiquetas pequeñas encima.
 
@@ -92,6 +117,8 @@ def publicacion(nombre_foto, pos, linea, titulo="", sub="", previa="", chips=Non
         partes.append(f'<div class="pastilla verde">{linea}</div>')
     if nota:
         partes.append(f'<div class="pastilla nota">{nota}</div>')
+    if cta:
+        partes.append('<div class="pastilla cta">Comenta <b>CHELITO</b> para más info</div>')
     return pagina(f"""
       <img class="foto" src="{foto(nombre_foto)}" style="object-position:{pos}">
       {f'<div class="numero">{numero}</div>' if numero else ""}
@@ -99,47 +126,69 @@ def publicacion(nombre_foto, pos, linea, titulo="", sub="", previa="", chips=Non
       <div class="etiquetas" style="bottom:{abajo}px">{"".join(partes)}</div>""", *tamano)
 
 
+def impacto(nombre_foto, pos, titulo, color="#ead2df", tam=150, cinta="", cinta_color="", fr="",
+            chips=None, numero=None, cta=False, previa="", tamano=FEED):
+    """Titular grande con contorno sobre la foto, en los colores de la marca."""
+    partes = []
+    if previa:
+        partes.append(f'<div class="cinta verde" style="font-size:34px">{previa}</div>')
+    partes.append(f'<div class="grande" style="font-size:{tam}px;color:{color}">{titulo}</div>')
+    if chips:
+        partes.append('<div class="chips-color">' + "".join(f"<span>{c}</span>" for c in chips) + "</div>")
+    if cinta:
+        partes.append(f'<div class="cinta {cinta_color}">{cinta}</div>')
+    if fr:
+        partes.append(f'<div class="fr-nota">FR · {fr}</div>')
+    if cta:
+        partes.append('<div class="pastilla cta">Comenta <b>CHELITO</b> para más info</div>')
+    return pagina(f"""
+      <img class="foto" src="{foto(nombre_foto)}" style="object-position:{pos}">
+      {f'<div class="numero-grande">{numero}</div>' if numero else ""}
+      {sello()}
+      <div class="impacto">{"".join(partes)}</div>""", *tamano)
+
+
 # ---------------------------------------------------------------- Piezas
 
 def carrusel_paletas():
     """Jue 5 nov · C. Educativo · «Paletas 101»."""
-    agua = [("Mango", "mangue"), ("Fresa", "fraise"), ("Tamarindo", "tamarin"), ("Piña", "ananas"), ("Limón", "lime")]
-    crema = [("Coco", ""), ("Fresa", "fraise"), ("Rompope", ""), ("Nuez", "pacane"), ("Pistache", ""),
-             ("Vainilla", "vanille"), ("Oreo", ""), ("Chocolate", "chocolat"), ("Mango", "mangue")]
+    agua = ["Mango", "Fresa", "Tamarindo", "Piña", "Limón"]
+    crema = ["Coco", "Fresa", "Rompope", "Nuez", "Pistache", "Vainilla", "Oreo", "Chocolate", "Mango"]
     return {
-        "paletas-101-1-portada": publicacion(
-            "paletas-fila", "50% 60%", "Desliza y elige la tuya →",
-            titulo="Paletas 101", sub="De agua, con chamoy o de crema · eau, chamoy ou crème", previa="¿Sabías que…?"),
-        "paletas-101-2-agua": publicacion(
-            "paleta-verde", "45% 50%", "Frutales y refrescantes · fruitées",
-            titulo="De agua", sub="À base d'eau", previa="1 / 3", chips=agua),
-        "paletas-101-3-chamoy": publicacion(
-            "paletas-colores", "55% 55%", "Dulce, saladito y enchilado · sucré, salé, piquant",
-            titulo="Con chamoy", sub="Avec chamoy", previa="2 / 3", chips=agua),
-        "paletas-101-4-crema": publicacion(
-            "paletas-sobre-congelador", "40% 50%", "Cremositas · onctueuses",
-            titulo="De crema", sub="À la crème", previa="3 / 3", chips=crema),
-        "paletas-101-5-cierre": publicacion(
-            "paletas-acomodadas", "55% 50%", DIRECCION, nota=HORARIO_ES,
-            titulo="¿Cuál vas a probar?", sub="Laquelle tu essaies ?"),
+        "paletas-101-1-portada": impacto(
+            "paletas-fila", "50% 60%", "PALETAS<br>101", "#ead2df", 190, previa="¿Sabías que…?",
+            cinta="De agua, con chamoy o de crema", fr="Les paletas : eau, chamoy ou crème"),
+        "paletas-101-2-agua": impacto(
+            "paleta-verde", "45% 50%", "DE AGUA", "#e0a23b", 170, previa="1 / 3", chips=agua,
+            cinta="Frutales y refrescantes", cinta_color="verde", fr="À base d'eau, fruitées"),
+        "paletas-101-3-chamoy": impacto(
+            "paletas-colores", "55% 55%", "CON<br>CHAMOY", "#e9843e", 160, previa="2 / 3", chips=agua,
+            cinta="Dulce, saladito y enchilado", fr="Avec chamoy : sucré, salé, piquant"),
+        "paletas-101-4-crema": impacto(
+            "paletas-sobre-congelador", "40% 50%", "DE CREMA", "#ead2df", 160, previa="3 / 3", chips=crema,
+            cinta="Cremositas", cinta_color="mostaza", fr="À la crème, onctueuses"),
+        "paletas-101-5-cierre": impacto(
+            "paletas-acomodadas", "55% 50%", "¿CUÁL VAS<br>A PROBAR?", "#e0a23b", 130,
+            cinta=DIRECCION, cinta_color="verde", fr="Laquelle tu essaies ?", cta=True),
     }
 
 
 def carrusel_conchas():
     """Jue 12 nov · D. Interacción · «¿Cuál agarras primero?»."""
-    panes = [("concha-con-leche", "62% 70%", "Concha clásica · la classique"),
-             ("concha-rosa", "35% 40%", "Concha de color · concha colorée"),
-             ("pan-de-muerto-concha", "50% 45%", "Pan de muerto de concha · avec croûte de concha")]
+    panes = [("concha-con-leche", "62% 70%", "CONCHA<br>CLÁSICA", "#ead2df", "La classique"),
+             ("concha-rosa", "35% 40%", "CONCHA<br>DE COLOR", "#e0a23b", "Concha colorée"),
+             ("pan-de-muerto-concha", "50% 45%", "PAN DE MUERTO<br>DE CONCHA", "#ead2df", "Pan de muerto avec croûte de concha")]
     piezas = {
         "conchas-1-portada": publicacion(
             "pan-de-muerto-concha", "50% 40%", "Desliza y comenta 1, 2 o 3 →",
             titulo="¿Cuál agarras primero?", sub="Laquelle en premier ?", previa="Vota en comentarios"),
     }
-    for i, (n, p, linea) in enumerate(panes, start=1):
-        piezas[f"conchas-{i + 1}-opcion-{i}"] = publicacion(n, p, linea, numero=i)
-    piezas["conchas-5-cierre"] = publicacion(
-        "tienda-pan-estantes", "100% 50%", "El viernes contamos los votos en historias",
-        titulo="Comenta 1, 2 o 3", sub="Commente ton numéro !")
+    for i, (n, p, titulo, color, fr) in enumerate(panes, start=1):
+        piezas[f"conchas-{i + 1}-opcion-{i}"] = impacto(n, p, titulo, color, 120, numero=i,
+                                                       cinta=f"Comenta {i} si es tu favorita", fr=fr)
+    piezas["conchas-5-cierre"] = impacto(
+        "tienda-pan-estantes", "100% 50%", "COMENTA<br>1, 2 O 3", "#e0a23b", 170,
+        cinta="El viernes contamos los votos", cinta_color="verde", fr="Commente ton numéro !")
     return piezas
 
 
@@ -148,9 +197,9 @@ def livraison():
     comun = dict(titulo=f"¡Te lo llevamos a casa!<br>{TELEFONO}", sub="On livre ! Appelle-nous",
                  previa="Pedidos por teléfono")
     return {
-        "livraison-feed": publicacion("tienda-mostrador", "50% 55%", HORARIO_ES, **comun),
+        "livraison-feed": publicacion("tienda-mostrador", "50% 55%", HORARIO_ES, cta=True, **comun),
         "livraison-historia": publicacion("tienda-mostrador", "45% 50%", HORARIO_ES, tamano=HISTORIA,
-                                          abajo=320, **comun),
+                                          abajo=320, cta=True, **comun),
     }
 
 
@@ -159,13 +208,13 @@ def sueltas():
     return {
         "nostalgia-gansito": publicacion("gansito-marias", "40% 60%",
                                          "Si comiste esto de niño, eres de los nuestros",
-                                         nota="FR · Les collations de notre enfance"),
+                                         nota="FR · Les collations de notre enfance", cta=True),
         "nostalgia-carrito": publicacion("carrito-paletero", "62% 40%", "El carrito paletero también emigró",
-                                         nota="FR · Le chariot à paletas, comme au Mexique"),
+                                         nota="FR · Le chariot à paletas, comme au Mexique", cta=True),
         "nostalgia-fabuloso": publicacion("hogar-limpieza", "55% 45%", "Si tu casa olía a Fabuloso los sábados…",
-                                          nota="FR · Les incontournables d'une maison mexicaine"),
+                                          nota="FR · Les incontournables d'une maison mexicaine", cta=True),
         "tamales": publicacion("tamal", "50% 4%", f"¡Hay tamales! · Apártalos al {TELEFONO}",
-                               nota="FR · Il y a des tamales ! Appelle pour réserver", logo=False),
+                               nota="FR · Il y a des tamales ! Appelle pour réserver", logo=False, cta=True),
     }
 
 
