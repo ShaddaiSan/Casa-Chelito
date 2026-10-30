@@ -156,16 +156,16 @@ def carrusel_paletas():
     crema = ["Coco", "Fresa", "Rompope", "Nuez", "Pistache", "Vainilla", "Oreo", "Chocolate", "Mango"]
     return {
         "paletas-101-1-portada": impacto(
-            "paletas-fila", "50% 60%", "PALETAS<br>101", "#ead2df", 190, previa="¿Sabías que…?",
+            "paletas-fila", "50% 60%", "PALETAS", "#ead2df", 190, previa="¿Sabías que…?",
             cinta="De agua, con chamoy o de crema", fr="Les paletas : eau, chamoy ou crème"),
         "paletas-101-2-agua": impacto(
-            "paleta-verde", "45% 50%", "DE AGUA", "#e0a23b", 170, previa="1 / 3", chips=agua,
+            "paleta-verde", "45% 50%", "DE AGUA", "#e0a23b", 170, chips=agua,
             cinta="Frutales y refrescantes", cinta_color="verde", fr="À base d'eau, fruitées"),
         "paletas-101-3-chamoy": impacto(
-            "paletas-colores", "55% 55%", "CON<br>CHAMOY", "#e9843e", 160, previa="2 / 3", chips=agua,
+            "paletas-colores", "55% 55%", "CON<br>CHAMOY", "#e9843e", 160, chips=agua,
             cinta="Dulce, saladito y enchilado", fr="Avec chamoy : sucré, salé, piquant"),
         "paletas-101-4-crema": impacto(
-            "paletas-sobre-congelador", "40% 50%", "DE CREMA", "#ead2df", 160, previa="3 / 3", chips=crema,
+            "paletas-sobre-congelador", "40% 50%", "DE CREMA", "#ead2df", 160, chips=crema,
             cinta="Cremositas", cinta_color="mostaza", fr="À la crème, onctueuses"),
         "paletas-101-5-cierre": impacto(
             "paletas-acomodadas", "55% 50%", "¿CUÁL VAS<br>A PROBAR?", "#e0a23b", 130,
@@ -180,15 +180,14 @@ def carrusel_conchas():
              ("pan-de-muerto-concha", "50% 45%", "PAN DE MUERTO<br>DE CONCHA", "#ead2df", "Pan de muerto avec croûte de concha")]
     piezas = {
         "conchas-1-portada": publicacion(
-            "pan-de-muerto-concha", "50% 40%", "Desliza y comenta 1, 2 o 3 →",
-            titulo="¿Cuál agarras primero?", sub="Laquelle en premier ?", previa="Vota en comentarios"),
+            "pan-de-muerto-concha", "50% 40%", "Desliza →",
+            titulo="¿Cuál agarras primero?", sub="Laquelle en premier ?", cta=True),
     }
     for i, (n, p, titulo, color, fr) in enumerate(panes, start=1):
-        piezas[f"conchas-{i + 1}-opcion-{i}"] = impacto(n, p, titulo, color, 120, numero=i,
-                                                       cinta=f"Comenta {i} si es tu favorita", fr=fr)
+        piezas[f"conchas-{i + 1}-opcion-{i}"] = impacto(n, p, titulo, color, 120, fr=fr, cta=True)
     piezas["conchas-5-cierre"] = impacto(
-        "tienda-pan-estantes", "100% 50%", "COMENTA<br>1, 2 O 3", "#e0a23b", 170,
-        cinta="El viernes contamos los votos", cinta_color="verde", fr="Commente ton numéro !")
+        "tienda-pan-estantes", "100% 50%", "¿CUÁL ES TU<br>FAVORITA?", "#e0a23b", 140,
+        cinta="Pan mexicano todos los días", cinta_color="verde", fr="Laquelle est ta préférée ?", cta=True)
     return piezas
 
 
