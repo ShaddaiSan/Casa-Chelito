@@ -16,7 +16,7 @@ from pathlib import Path
 RAIZ = Path(__file__).resolve().parent.parent
 SRC = RAIZ / "src"
 MES = "2026-11"
-SALIDA = RAIZ / "redes" / MES
+SALIDA = RAIZ / "redes" / "salida" / MES  # ignorada en git: las imágenes se entregan aparte
 TRABAJO = RAIZ / "redes" / ".html"
 
 FEED = (1080, 1350)
@@ -148,6 +148,101 @@ def impacto(nombre_foto, pos, titulo, color="#ead2df", tam=150, cinta="", cinta_
       <div class="impacto">{"".join(partes)}</div>""", *tamano)
 
 
+FUENTES_REDES = (RAIZ / "redes" / "fuentes").as_uri()
+
+CSS_FLYER = f"""
+@font-face {{ font-family: "Kaushan Script"; src: url("{FUENTES_REDES}/kaushan-script.woff2"); }}
+@font-face {{ font-family: "Permanent Marker"; src: url("{FUENTES_REDES}/permanent-marker.woff2"); }}
+@font-face {{ font-family: "Caveat Brush"; src: url("{FUENTES_REDES}/caveat-brush.woff2"); }}
+.velo {{ position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(20,8,4,.82) 0%, rgba(20,8,4,.45) 26%, rgba(20,8,4,0) 42%),
+              linear-gradient(0deg, rgba(20,8,4,.55) 0%, rgba(20,8,4,0) 22%),
+              radial-gradient(ellipse at 50% 55%, rgba(0,0,0,0) 55%, rgba(0,0,0,.35) 100%); }}
+.logo-flyer {{ position: absolute; right: 40px; top: 40px; width: 210px; height: 210px; border-radius: 50%;
+  border: 6px solid #fffaf6; box-shadow: 0 8px 24px rgba(0,0,0,.45); }}
+.cabeza {{ position: absolute; left: 70px; top: 50px; width: 760px; transform: rotate(-6deg); transform-origin: left top; }}
+.linea1 {{ font-family: "Kaushan Script"; color: #fff; font-size: 116px; line-height: 1; margin-left: 60px;
+  text-shadow: 0 6px 18px rgba(0,0,0,.6); }}
+.linea2 {{ font-family: "Kaushan Script"; color: #f4b731; font-size: 200px; line-height: .9; margin-top: -6px;
+  text-shadow: 0 8px 22px rgba(0,0,0,.55); }}
+.bajada {{ font-family: "Permanent Marker"; color: #fff; font-size: 40px; white-space: nowrap; margin-top: 10px; margin-left: 20px;
+  text-shadow: 0 3px 10px rgba(0,0,0,.7); position: relative; display: inline-block; }}
+.subrayado {{ position: absolute; left: 34%; bottom: -26px; width: 300px; height: 34px; }}
+.chispas {{ position: absolute; inset: 0; pointer-events: none; }}
+.banda {{ position: absolute; left: 60px; bottom: 250px; transform: rotate(-3deg); transform-origin: left center;
+  padding: 26px 70px 30px 56px; }}
+.banda svg {{ position: absolute; inset: 0; width: 100%; height: 100%; filter: drop-shadow(0 6px 10px rgba(0,0,0,.4)); }}
+.banda span {{ position: relative; font-family: "Caveat Brush"; color: #fff; font-size: 56px; line-height: 1;
+  white-space: nowrap; }}
+.pie-flyer {{ position: absolute; left: 70px; right: 70px; bottom: 92px; display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }}
+.pie-flyer .fr {{ background: #fffaf6; color: #47704c; font-weight: 800; font-size: 28px; padding: 10px 26px; border-radius: 999px;
+  box-shadow: 0 4px 12px rgba(0,0,0,.3); }}
+.bordado {{ position: absolute; left: 0; right: 0; bottom: 0; height: 66px; }}
+.trazos {{ position: absolute; right: 30px; bottom: 80px; width: 150px; height: 90px; }}
+"""
+
+GOTA = "M0,0 C9,-2 16,14 11,78 C10,90 -10,90 -11,78 C-15,24 -8,2 0,0 Z"
+
+
+def chispas(lista):
+    """Salpicaduras de pincel: (x, y, ángulo, escala, color)."""
+    return '<svg class="chispas" viewBox="0 0 1080 1350">' + "".join(
+        f'<path d="{GOTA}" fill="{c}" transform="translate({x} {y}) rotate({r}) scale({e})"/>'
+        for x, y, r, e, c in lista) + "</svg>"
+
+
+BORDADO = """<svg class="bordado" viewBox="0 0 1080 66" preserveAspectRatio="none">
+  <defs><pattern id="b" width="96" height="66" patternUnits="userSpaceOnUse">
+    <rect width="96" height="66" fill="#2a120c"/>
+    <path d="M0,8 L12,0 L24,8 L36,0 L48,8 L60,0 L72,8 L84,0 L96,8" stroke="#e0a23b" stroke-width="4" fill="none"/>
+    <path d="M0,58 L12,66 L24,58 L36,66 L48,58 L60,66 L72,58 L84,66 L96,58" stroke="#e0a23b" stroke-width="4" fill="none"/>
+    <path d="M48,18 L60,33 L48,48 L36,33 Z" fill="#c8321e"/><circle cx="48" cy="33" r="5" fill="#f4b731"/>
+    <path d="M10,33 C16,22 26,22 30,33 C26,44 16,44 10,33 Z" fill="#2f8a43"/>
+    <path d="M66,33 C70,22 80,22 86,33 C80,44 70,44 66,33 Z" fill="#2f8a43"/>
+    <circle cx="0" cy="33" r="6" fill="#e9843e"/><circle cx="96" cy="33" r="6" fill="#e9843e"/>
+  </pattern></defs><rect width="1080" height="66" fill="url(#b)"/></svg>"""
+
+TRAZOS = """<svg class="trazos" viewBox="0 0 150 90">
+  <path d="M10,80 C50,55 95,30 145,8" stroke="#c8321e" stroke-width="9" stroke-linecap="round" fill="none"/>
+  <path d="M22,88 C60,64 100,42 146,24" stroke="#f4b731" stroke-width="8" stroke-linecap="round" fill="none"/>
+  <path d="M40,90 C72,72 108,56 146,40" stroke="#2f8a43" stroke-width="8" stroke-linecap="round" fill="none"/>
+</svg>"""
+
+BANDA = """<svg viewBox="0 0 1000 120" preserveAspectRatio="none">
+  <path d="M18,14 C200,4 600,10 985,6 L965,34 L998,58 L972,84 L992,114 C640,118 300,112 12,118 L30,92 L4,64 L26,40 Z" fill="#2f7a3f"/>
+  <path d="M60,22 L930,16 M80,104 L900,108" stroke="#3f9150" stroke-width="5" stroke-linecap="round" opacity=".7"/>
+</svg>"""
+
+
+def flyer(nombre_foto, pos, linea1, linea2, bajada, banda, fr, cta=True, salpicaduras=None, subrayado=True):
+    """Estilo flyer: titular de pincel, salpicaduras, banda verde y borde bordado."""
+    salpicaduras = salpicaduras or [
+        (70, 150, -60, .8, "#f4b731"), (52, 250, -95, .75, "#2f8a43"), (60, 345, -125, .65, "#c8321e"),
+        (880, 300, 60, .7, "#c8321e"), (905, 375, 95, .65, "#f4b731"), (850, 395, 130, .55, "#2f8a43")]
+    sub = ('<svg class="subrayado" viewBox="0 0 300 34"><path d="M4,24 C80,10 200,6 296,14 C200,16 90,22 10,32 Z" '
+           'fill="#f4b731"/></svg>') if subrayado else ""
+    cta_html = '<div class="pastilla cta">Comenta <b>CHELITO</b> para más info</div>' if cta else ""
+    return (f'<!doctype html><html><head><meta charset="utf-8"><style>{CSS}{CSS_FLYER}</style></head><body>'
+            f'<div class="lienzo" style="width:1080px;height:1350px">'
+            f'<img class="foto" src="{foto(nombre_foto)}" style="object-position:{pos}">'
+            f'<div class="velo"></div>{chispas(salpicaduras)}'
+            f'<div class="cabeza"><div class="linea1">{linea1}</div><div class="linea2">{linea2}</div>'
+            f'<div class="bajada">{bajada}{sub}</div></div>'
+            f'<img class="logo-flyer" src="{LOGO}" alt="">'
+            f'<div class="banda">{BANDA}<span>{banda}</span></div>'
+            f'<div class="pie-flyer"><div class="fr">FR · {fr}</div>{cta_html}</div>'
+            f'{TRAZOS}{BORDADO}</div></body></html>')
+
+
+def flyers():
+    return {
+        "flyer-gansito": flyer("gansito-marias", "4% 75%", "El antojo de", "Siempre",
+                               "EL SABOR DE MÉXICO EN CADA BOCADO",
+                               "Si comiste esto de niño, eres de los nuestros",
+                               "Les collations de notre enfance"),
+    }
+
+
 # ---------------------------------------------------------------- Piezas
 
 def carrusel_paletas():
@@ -222,7 +317,7 @@ def sueltas():
 def main():
     filtro = sys.argv[1] if len(sys.argv) > 1 else ""
     piezas = {}
-    for grupo in (carrusel_paletas, carrusel_conchas, livraison, sueltas):
+    for grupo in (carrusel_paletas, carrusel_conchas, livraison, sueltas, flyers):
         piezas.update(grupo())
     piezas = {k: v for k, v in piezas.items() if filtro in k}
     SALIDA.mkdir(parents=True, exist_ok=True)
