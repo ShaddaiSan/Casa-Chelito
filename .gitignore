@@ -1,2 +1,4 @@
-redes/.html/
-redes/salida/
+redes/
+tools/capturar.js
+tools/redes.py
+tools/reel.py
