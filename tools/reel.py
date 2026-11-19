@@ -25,25 +25,25 @@ NOMBRE = "encontre-mexico-en-montreal"
 
 # foto, segundos, (centro x, centro y, zoom) al inicio y al final — coordenadas de la foto original
 ESCENAS = [
-    dict(foto="tienda-mostrador", dur=1.6, ini=(1000, 760, 1.00), fin=(1000, 760, 1.25),
+    dict(foto="tienda-mostrador", dur=2.4, ini=(1000, 760, 1.00), fin=(1000, 760, 1.10),
          es="POV: encontraste<br>México en Montreal", fr="POV : tu trouves le Mexique à Montréal"),
-    dict(foto="tienda-pan-estantes", dur=1.4, ini=(950, 667, 1.0), fin=(1450, 667, 1.0),
+    dict(foto="tienda-pan-estantes", dur=2.0, ini=(1050, 667, 1.0), fin=(1300, 667, 1.0),
          es="Pan mexicano", fr="Pain mexicain"),
-    dict(foto="pan-de-muerto-horneado", dur=1.2, ini=(1000, 667, 1.0), fin=(1000, 700, 1.13)),
-    dict(foto="concha-con-leche", dur=1.2, ini=(1250, 700, 1.0), fin=(1330, 750, 1.1),
+    dict(foto="pan-de-muerto-horneado", dur=1.8, ini=(1000, 667, 1.0), fin=(1000, 680, 1.06)),
+    dict(foto="concha-con-leche", dur=1.8, ini=(1250, 700, 1.0), fin=(1290, 725, 1.06),
          es="Como en casa", fr="Comme à la maison"),
-    dict(foto="paletas-fila", dur=1.2, ini=(1250, 760, 1.05), fin=(750, 760, 1.05),
+    dict(foto="paletas-fila", dur=2.0, ini=(1150, 760, 1.05), fin=(850, 760, 1.05),
          es="Paletas artesanales", fr="Paletas artisanales"),
-    dict(foto="carrito-paletero", dur=1.2, ini=(700, 667, 1.0), fin=(560, 520, 1.2)),
-    dict(foto="salsas-la-anita", dur=1.2, ini=(700, 760, 1.15), fin=(700, 590, 1.15),
+    dict(foto="carrito-paletero", dur=1.8, ini=(680, 640, 1.0), fin=(620, 580, 1.08)),
+    dict(foto="salsas-la-anita", dur=1.8, ini=(700, 720, 1.12), fin=(700, 630, 1.12),
          es="Salsas, chiles, dulces…", fr="Sauces, piments, bonbons…"),
-    dict(foto="estante-abarrotes", dur=1.2, ini=(750, 667, 1.0), fin=(1250, 667, 1.0),
+    dict(foto="estante-abarrotes", dur=2.0, ini=(850, 667, 1.0), fin=(1150, 667, 1.0),
          es="Todo lo que extrañas", fr="Tout ce qui te manque"),
-    dict(foto="tamal", dur=1.4, ini=(610, 1150, 1.26), fin=(620, 1170, 1.38),
+    dict(foto="tamal", dur=2.0, ini=(610, 1150, 1.26), fin=(615, 1160, 1.33),
          es="¡Y tamales!", fr="Et des tamales !", texto_abajo=True),
 ]
-DUR_FINAL = 3.4
-TRANSICION = 0.27  # barrido entre la escena 1 y 2, y zoom hacia la pantalla final
+DUR_FINAL = 4.0
+TRANSICION = 0.4  # barrido entre la escena 1 y 2, y zoom hacia la pantalla final
 
 # Ajustes de luz que también usa el sitio
 AJUSTES = json.loads((FOTOS / "ajustes.json").read_text())
@@ -229,7 +229,7 @@ def main():
 
     def cuadro_escena(i, t):
         e = ESCENAS[i]
-        k = suave(min(t / e["dur"], 1))
+        k = min(t / e["dur"], 1)  # movimiento constante y lento
         cx, cy, z = (a + (b - a) * k for a, b in zip(e["ini"], e["fin"]))
         im = color(encuadre(fotos[e["foto"]], cx, cy, z))
         if (i + 1) in capas:
