@@ -7,6 +7,7 @@ Uso:  python3 tools/build.py
 - Textos:  src/i18n/{es,en,fr}.json  →  se genera una copia de cada página por idioma
 - Datos:   src/config.json  (teléfono, dirección, mapa…)
 - Fotos:   src/images/*  →  docs/assets/img en AVIF, WebP y JPEG a varios tamaños
+- PDFs:    src/pdf/*  →  docs/assets/pdf (menú y catálogo de precios para descargar)
 
 Marcas en las plantillas:
   {{t.clave}}            texto traducido
@@ -35,6 +36,7 @@ ANCHOS = [400, 800, 1200, 1600]
 PAGINAS = [
     # id, archivo, clave del título, clave de la descripción, mostrar banda de pedido
     ("inicio", "index.html", None, "meta.descInicio", True),
+    ("menu", "menu.html", "nav.menu", "meta.descMenu", True),
     ("pan", "pan.html", "nav.pan", "meta.descPan", True),
     ("paletas", "paletas.html", "nav.paletas", "meta.descPaletas", True),
     ("abarrotes", "abarrotes.html", "nav.abarrotes", "meta.descAbarrotes", True),
@@ -246,12 +248,12 @@ def datos_estructurados(lang):
 def construir():
     for l in IDIOMAS:
         shutil.rmtree(OUT / l, ignore_errors=True)
-    for carpeta in ("css", "js", "fonts"):
+    for carpeta in ("css", "js", "fonts", "pdf"):
         shutil.rmtree(OUT / "assets" / carpeta, ignore_errors=True)
     OUT.mkdir(exist_ok=True)
     optimizar_imagenes()
 
-    for carpeta in ("css", "js", "fonts"):
+    for carpeta in ("css", "js", "fonts", "pdf"):
         shutil.copytree(SRC / carpeta, OUT / "assets" / carpeta)
     (OUT / ".nojekyll").write_text("")
 

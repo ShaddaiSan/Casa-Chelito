@@ -490,6 +490,20 @@ p { text-wrap: pretty; }
 .seccion.blanca .lista-productos li { background: var(--rosa-claro); }
 .lista-productos .producto { display: block; font-weight: 800; }
 .lista-productos .detalle { display: block; font-size: 0.95rem; }
+.lista-productos .precio { display: block; margin-top: 6px; font-weight: 800; color: var(--rojo); }
+
+/* Descargas en PDF */
+.descargas { text-align: center; }
+.descargas p { max-width: 620px; margin: 0 auto 8px; }
+.botones-pdf {
+  list-style: none;
+  padding: 0;
+  margin: 24px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
 
 /* Galería */
 .galeria {
