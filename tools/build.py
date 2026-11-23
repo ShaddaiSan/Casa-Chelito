@@ -7,7 +7,7 @@ Uso:  python3 tools/build.py
 - Textos:  src/i18n/{es,en,fr}.json  →  se genera una copia de cada página por idioma
 - Datos:   src/config.json  (teléfono, dirección, mapa…)
 - Fotos:   src/images/*  →  docs/assets/img en AVIF, WebP y JPEG a varios tamaños
-- PDFs:    src/pdf/*  →  docs/assets/pdf (menú y catálogo de precios para descargar)
+- Productos: src/productos.json (foto, nombre, descripción y precio)  →  {{productos grupo}}
 
 Marcas en las plantillas:
   {{t.clave}}            texto traducido
@@ -16,6 +16,7 @@ Marcas en las plantillas:
   {{lang}}               idioma actual
   {{> parcial}}          inserta src/partials/parcial.html
   {{img nombre alt=clave sizes="…" class="…" eager}}   imagen responsiva
+  {{productos grupo}}    tarjetas de productos con foto y precio (menu, pan, abarrotes)
 """
 import html
 import json
@@ -44,6 +45,7 @@ PAGINAS = [
 ]
 
 CONFIG = json.loads((SRC / "config.json").read_text())
+PRODUCTOS = json.loads((SRC / "productos.json").read_text())
 TEXTOS = {l: json.loads((SRC / "i18n" / f"{l}.json").read_text()) for l in IDIOMAS}
 
 
@@ -107,10 +109,10 @@ def generar_logo(im, destino):
     lienzo.save(destino / "compartir.jpg", "JPEG", quality=85, optimize=True)
 
 
-def imagen(nombre, lang, base, alt=None, sizes="100vw", clase="", eager=False):
+def imagen(nombre, lang, base, alt=None, sizes="100vw", clase="", eager=False, alt_texto=None):
     ancho, alto = DIMENSIONES[nombre]
     anchos = anchos_para(ancho)
-    texto_alt = html.escape(TEXTOS[lang][alt]) if alt else ""
+    texto_alt = html.escape(alt_texto if alt_texto is not None else (TEXTOS[lang][alt] if alt else ""))
 
     def srcset(fmt):
         return ", ".join(f"{base}assets/img/{nombre}-{a}.{fmt} {a}w" for a in anchos)
@@ -126,6 +128,48 @@ def imagen(nombre, lang, base, alt=None, sizes="100vw", clase="", eager=False):
         f'width="{ancho}" height="{alto}" alt="{texto_alt}" decoding="async" {carga}>'
         f'</picture>'
     )
+
+
+# ---------- Productos con foto y precio ----------
+
+def formato_precio(valor, lang):
+    texto = f"{float(valor):.2f}"
+    return texto.replace(".", ",") + "\u00a0$" if lang == "fr" else "$" + texto
+
+
+def lineas_precio(precio, lang):
+    if isinstance(precio, (int, float)):
+        return [formato_precio(precio, lang)]
+    return [re.sub(r"\{([\d.]+)\}", lambda m: formato_precio(m.group(1), lang), linea) for linea in precio[lang]]
+
+
+def productos(grupo, lang, base):
+    grande = grupo == "menu"
+    sizes = "(min-width: 1120px) 340px, (min-width: 700px) 30vw, 100vw" if grande else \
+            "(min-width: 1120px) 200px, (min-width: 700px) 22vw, 45vw"
+    secciones = []
+    for i, sec in enumerate(PRODUCTOS[grupo]):
+        tarjetas = []
+        for p in sec["productos"]:
+            nombre = p["nombre"][lang]
+            desc = f'<p class="producto-desc">{html.escape(p["descripcion"][lang])}</p>' if p.get("descripcion") else ""
+            precio = "<br>".join(html.escape(l) for l in lineas_precio(p["precio"], lang))
+            tarjetas.append(
+                f'          <li>{imagen(p["imagen"], lang, base, sizes=sizes, alt_texto=nombre)}'
+                f'<div class="producto-texto"><h3>{html.escape(nombre)}</h3>{desc}'
+                f'<p class="producto-precio">{precio}</p></div></li>')
+        nota = f'<p>{{{{t.precios.nota}}}}</p>' if i == 0 else ""
+        secciones.append(f'''
+    <section class="seccion{" blanca" if i % 2 else ""}" aria-labelledby="sec-{sec["id"]}">
+      <div class="contenedor">
+        <header class="titulo"><h2 id="sec-{sec["id"]}">{html.escape(sec["titulo"][lang])}</h2><span class="adorno" aria-hidden="true"></span>{nota}</header>
+        <ul class="tarjetas-producto{" grandes" if grande else ""}">
+{chr(10).join(tarjetas)}
+        </ul>
+      </div>
+    </section>
+''')
+    return "".join(secciones)
 
 
 # ---------- Plantillas ----------
@@ -148,6 +192,7 @@ def renderizar(plantilla, lang, base, pagina):
                       clase=attrs.get("class", ""), eager="eager" in attrs)
 
     plantilla = RE_IMG.sub(img, plantilla)
+    plantilla = re.sub(r"\{\{productos (\w+)\}\}", lambda m: productos(m.group(1), lang, base), plantilla)
 
     def traducir(m):
         clave = m.group(1)
@@ -248,12 +293,12 @@ def datos_estructurados(lang):
 def construir():
     for l in IDIOMAS:
         shutil.rmtree(OUT / l, ignore_errors=True)
-    for carpeta in ("css", "js", "fonts", "pdf"):
+    for carpeta in ("css", "js", "fonts"):
         shutil.rmtree(OUT / "assets" / carpeta, ignore_errors=True)
     OUT.mkdir(exist_ok=True)
     optimizar_imagenes()
 
-    for carpeta in ("css", "js", "fonts", "pdf"):
+    for carpeta in ("css", "js", "fonts"):
         shutil.copytree(SRC / carpeta, OUT / "assets" / carpeta)
     (OUT / ".nojekyll").write_text("")
 

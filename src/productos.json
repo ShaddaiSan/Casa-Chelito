@@ -1,0 +1,976 @@
+{
+ "menu": [
+  {
+   "id": "tamales",
+   "titulo": {
+    "es": "Tamales y tortas",
+    "en": "Tamales & tortas",
+    "fr": "Tamales et tortas"
+   },
+   "productos": [
+    {
+     "imagen": "menu-tamales",
+     "nombre": {
+      "es": "Tamales",
+      "en": "Tamales",
+      "fr": "Tamales"
+     },
+     "descripcion": {
+      "es": "Pollo rojo · Pollo verde · Pollo en mole · Puerco rojo · Puerco verde · Rajas con queso",
+      "en": "Red chicken · Green chicken · Chicken in mole · Red pork · Green pork · Peppers with cheese",
+      "fr": "Poulet rouge · Poulet vert · Poulet au mole · Porc rouge · Porc vert · Poivrons au fromage"
+     },
+     "precio": {
+      "es": [
+       "{8.50} c/u"
+      ],
+      "en": [
+       "{8.50} each"
+      ],
+      "fr": [
+       "{8.50} chacun"
+      ]
+     }
+    },
+    {
+     "imagen": "menu-tamal-dulce-de-maiz",
+     "nombre": {
+      "es": "Tamal dulce de maíz",
+      "en": "Sweet corn tamal",
+      "fr": "Tamal sucré au maïs"
+     },
+     "precio": {
+      "es": [
+       "{8.50} c/u"
+      ],
+      "en": [
+       "{8.50} each"
+      ],
+      "fr": [
+       "{8.50} chacun"
+      ]
+     }
+    },
+    {
+     "imagen": "menu-torta-de-tamal",
+     "nombre": {
+      "es": "Torta de tamal",
+      "en": "Tamal torta (sandwich)",
+      "fr": "Torta au tamal (sandwich)"
+     },
+     "precio": 12.0
+    }
+   ]
+  },
+  {
+   "id": "mariscos",
+   "titulo": {
+    "es": "Mariscos",
+    "en": "Seafood",
+    "fr": "Fruits de mer"
+   },
+   "productos": [
+    {
+     "imagen": "menu-ceviche",
+     "nombre": {
+      "es": "Ceviche",
+      "en": "Ceviche",
+      "fr": "Ceviche"
+     },
+     "descripcion": {
+      "es": "Porción individual",
+      "en": "Single serving",
+      "fr": "Portion individuelle"
+     },
+     "precio": 19.5
+    },
+    {
+     "imagen": "menu-coctel-de-camaron",
+     "nombre": {
+      "es": "Cóctel de camarón",
+      "en": "Shrimp cocktail",
+      "fr": "Cocktail de crevettes"
+     },
+     "descripcion": {
+      "es": "Porción individual",
+      "en": "Single serving",
+      "fr": "Portion individuelle"
+     },
+     "precio": 22.0
+    }
+   ]
+  },
+  {
+   "id": "carnitas",
+   "titulo": {
+    "es": "Carnitas",
+    "en": "Carnitas",
+    "fr": "Carnitas"
+   },
+   "productos": [
+    {
+     "imagen": "menu-carnitas",
+     "nombre": {
+      "es": "Carnitas",
+      "en": "Carnitas",
+      "fr": "Carnitas"
+     },
+     "descripcion": {
+      "es": "El kilo incluye tortillas, salsas, verduras, limones y 2 Coca-Colas de lata",
+      "en": "The kilo includes tortillas, salsas, vegetables, limes and 2 canned Coca-Colas",
+      "fr": "Le kilo comprend tortillas, salsas, légumes, limes et 2 Coca-Cola en canette"
+     },
+     "precio": {
+      "es": [
+       "1 kg {65.00} · ½ kg {40.00}"
+      ],
+      "en": [
+       "1 kg {65.00} · ½ kg {40.00}"
+      ],
+      "fr": [
+       "1 kg {65.00} · ½ kg {40.00}"
+      ]
+     }
+    },
+    {
+     "imagen": "menu-carnitas-al-pastor",
+     "nombre": {
+      "es": "Carnitas al pastor",
+      "en": "Carnitas al pastor",
+      "fr": "Carnitas al pastor"
+     },
+     "descripcion": {
+      "es": "El kilo incluye tortillas, salsas, verduras, limón y 2 Coca-Colas",
+      "en": "The kilo includes tortillas, salsas, vegetables, lime and 2 Coca-Colas",
+      "fr": "Le kilo comprend tortillas, salsas, légumes, lime et 2 Coca-Cola"
+     },
+     "precio": {
+      "es": [
+       "1 kg {65.00} · ½ kg {40.00}"
+      ],
+      "en": [
+       "1 kg {65.00} · ½ kg {40.00}"
+      ],
+      "fr": [
+       "1 kg {65.00} · ½ kg {40.00}"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "alitas",
+   "titulo": {
+    "es": "Combos de alitas",
+    "en": "Chicken wing combos",
+    "fr": "Combos d'ailes de poulet"
+   },
+   "productos": [
+    {
+     "imagen": "menu-combo-12-alitas",
+     "nombre": {
+      "es": "Combo 12 alitas",
+      "en": "12-wing combo",
+      "fr": "Combo 12 ailes"
+     },
+     "descripcion": {
+      "es": "Papas grandes, dedos de queso y 2 Coca-Colas",
+      "en": "Large fries, cheese sticks and 2 Coca-Colas",
+      "fr": "Grandes frites, bâtonnets de fromage et 2 Coca-Cola"
+     },
+     "precio": 50.0
+    },
+    {
+     "imagen": "menu-combo-12-alitas",
+     "nombre": {
+      "es": "Combo 8 alitas",
+      "en": "8-wing combo",
+      "fr": "Combo 8 ailes"
+     },
+     "descripcion": {
+      "es": "Media orden de papas, dedos de queso y 2 Coca-Colas",
+      "en": "Half order of fries, cheese sticks and 2 Coca-Colas",
+      "fr": "Demi-portion de frites, bâtonnets de fromage et 2 Coca-Cola"
+     },
+     "precio": 37.0
+    },
+    {
+     "imagen": "menu-combo-12-alitas",
+     "nombre": {
+      "es": "Combo 6 alitas",
+      "en": "6-wing combo",
+      "fr": "Combo 6 ailes"
+     },
+     "descripcion": {
+      "es": "Papas de ajo, 2 dedos de queso y 1 Coca-Cola",
+      "en": "Garlic fries, 2 cheese sticks and 1 Coca-Cola",
+      "fr": "Frites à l'ail, 2 bâtonnets de fromage et 1 Coca-Cola"
+     },
+     "precio": 29.0
+    }
+   ]
+  },
+  {
+   "id": "postres-bebidas",
+   "titulo": {
+    "es": "Postres y bebidas",
+    "en": "Desserts & drinks",
+    "fr": "Desserts et boissons"
+   },
+   "productos": [
+    {
+     "imagen": "menu-chocoflan-y-flan",
+     "nombre": {
+      "es": "Chocoflan y flan",
+      "en": "Chocoflan & flan",
+      "fr": "Chocoflan et flan"
+     },
+     "precio": {
+      "es": [
+       "Chocoflan: entero {95.00} · rebanada {12.00}",
+       "Flan: entero {50.00} · rebanada {10.00}"
+      ],
+      "en": [
+       "Chocoflan: whole {95.00} · slice {12.00}",
+       "Flan: whole {50.00} · slice {10.00}"
+      ],
+      "fr": [
+       "Chocoflan : entier {95.00} · tranche {12.00}",
+       "Flan : entier {50.00} · tranche {10.00}"
+      ]
+     }
+    },
+    {
+     "imagen": "menu-tejuino",
+     "nombre": {
+      "es": "Tejuino",
+      "en": "Tejuino",
+      "fr": "Tejuino"
+     },
+     "precio": 15.0
+    },
+    {
+     "imagen": "menu-mangonada",
+     "nombre": {
+      "es": "Mangonada",
+      "en": "Mangonada",
+      "fr": "Mangonada"
+     },
+     "precio": 15.99
+    }
+   ]
+  }
+ ],
+ "pan": [
+  {
+   "id": "pan-dulce",
+   "titulo": {
+    "es": "Pan dulce y panadería",
+    "en": "Sweet bread & bakery",
+    "fr": "Pain sucré et boulangerie"
+   },
+   "productos": [
+    {
+     "imagen": "cat-churro-de-guatemala-x5",
+     "nombre": {
+      "es": "Churro de Guatemala x5",
+      "en": "Guatemalan churro, pack of 5",
+      "fr": "Churro du Guatemala, paquet de 5"
+     },
+     "precio": 6.5
+    },
+    {
+     "imagen": "cat-concha-unidad",
+     "nombre": {
+      "es": "Concha (unidad)",
+      "en": "Concha (each)",
+      "fr": "Concha (unité)"
+     },
+     "precio": 3.5
+    },
+    {
+     "imagen": "cat-conchas-x4",
+     "nombre": {
+      "es": "Conchas x4",
+      "en": "Conchas, pack of 4",
+      "fr": "Conchas, paquet de 4"
+     },
+     "precio": 13.5
+    },
+    {
+     "imagen": "cat-cuernitos-unidad",
+     "nombre": {
+      "es": "Cuernitos (unidad)",
+      "en": "Cuernito (each)",
+      "fr": "Cuernito (unité)"
+     },
+     "precio": 2.99
+    },
+    {
+     "imagen": "cat-cuernitos-unidad",
+     "nombre": {
+      "es": "Cuernitos x4",
+      "en": "Cuernitos, pack of 4",
+      "fr": "Cuernitos, paquet de 4"
+     },
+     "precio": 10.5
+    },
+    {
+     "imagen": "cat-galleta-arcoiris-x5",
+     "nombre": {
+      "es": "Galleta Arcoíris x5",
+      "en": "Arcoíris cookies, pack of 5",
+      "fr": "Biscuits Arcoíris, paquet de 5"
+     },
+     "precio": 7.99
+    },
+    {
+     "imagen": "cat-galleta-champurrada-x5",
+     "nombre": {
+      "es": "Galleta Champurrada x5",
+      "en": "Champurrada cookies, pack of 5",
+      "fr": "Biscuits champurrada, paquet de 5"
+     },
+     "precio": 6.5
+    },
+    {
+     "imagen": "cat-galletas-unidad",
+     "nombre": {
+      "es": "Galletas (unidad)",
+      "en": "Cookie (each)",
+      "fr": "Biscuit (unité)"
+     },
+     "precio": 1.5
+    },
+    {
+     "imagen": "cat-galletas-polvoron-x5",
+     "nombre": {
+      "es": "Galletas Polvorón x5",
+      "en": "Polvorón cookies, pack of 5",
+      "fr": "Biscuits polvorón, paquet de 5"
+     },
+     "precio": 6.5
+    },
+    {
+     "imagen": "cat-muffin-unidad",
+     "nombre": {
+      "es": "Muffin (unidad)",
+      "en": "Muffin (each)",
+      "fr": "Muffin (unité)"
+     },
+     "precio": 1.99
+    },
+    {
+     "imagen": "cat-muffin-unidad",
+     "nombre": {
+      "es": "Muffin x4",
+      "en": "Muffins, pack of 4",
+      "fr": "Muffins, paquet de 4"
+     },
+     "precio": 5.99
+    },
+    {
+     "imagen": "cat-pan-brioche",
+     "nombre": {
+      "es": "Pan brioche",
+      "en": "Brioche bread",
+      "fr": "Pain brioché"
+     },
+     "precio": 13.99
+    },
+    {
+     "imagen": "cat-pan-de-canela-x5",
+     "nombre": {
+      "es": "Pan de canela x5",
+      "en": "Cinnamon bread, pack of 5",
+      "fr": "Pain à la cannelle, paquet de 5"
+     },
+     "precio": 10.5
+    },
+    {
+     "imagen": "cat-pan-de-muerto-grande",
+     "nombre": {
+      "es": "Pan de muerto grande",
+      "en": "Pan de muerto, large",
+      "fr": "Pan de muerto, grand"
+     },
+     "precio": 19.5
+    },
+    {
+     "imagen": "cat-pan-de-muerto-pequeno",
+     "nombre": {
+      "es": "Pan de muerto pequeño",
+      "en": "Pan de muerto, small",
+      "fr": "Pan de muerto, petit"
+     },
+     "precio": 6.5
+    },
+    {
+     "imagen": "cat-pan-mixto",
+     "nombre": {
+      "es": "Pan mixto",
+      "en": "Assorted bread",
+      "fr": "Pains assortis"
+     },
+     "precio": 13.5
+    },
+    {
+     "imagen": "cat-telera-o-bolillo-unidad",
+     "nombre": {
+      "es": "Telera o bolillo (unidad)",
+      "en": "Telera or bolillo roll (each)",
+      "fr": "Pain telera ou bolillo (unité)"
+     },
+     "precio": 1.5
+    },
+    {
+     "imagen": "cat-telera-o-bolillo-x4",
+     "nombre": {
+      "es": "Telera o bolillo x4",
+      "en": "Telera or bolillo rolls, pack of 4",
+      "fr": "Pains telera ou bolillo, paquet de 4"
+     },
+     "precio": 5.5
+    }
+   ]
+  },
+  {
+   "id": "postres",
+   "titulo": {
+    "es": "Postres",
+    "en": "Desserts",
+    "fr": "Desserts"
+   },
+   "productos": [
+    {
+     "imagen": "cat-arroz-con-leche",
+     "nombre": {
+      "es": "Arroz con leche",
+      "en": "Rice pudding (arroz con leche)",
+      "fr": "Riz au lait (arroz con leche)"
+     },
+     "precio": 9.5
+    },
+    {
+     "imagen": "cat-chocoflan",
+     "nombre": {
+      "es": "Chocoflan",
+      "en": "Chocoflan",
+      "fr": "Chocoflan"
+     },
+     "precio": 15.99
+    },
+    {
+     "imagen": "cat-flan-napolitano",
+     "nombre": {
+      "es": "Flan napolitano",
+      "en": "Flan napolitano",
+      "fr": "Flan napolitano"
+     },
+     "precio": 10.5
+    },
+    {
+     "imagen": "cat-gelatina-mosaico",
+     "nombre": {
+      "es": "Gelatina mosaico",
+      "en": "Mosaic gelatin",
+      "fr": "Gélatine mosaïque"
+     },
+     "precio": 9.5
+    },
+    {
+     "imagen": "cat-mangonada",
+     "nombre": {
+      "es": "Mangonada",
+      "en": "Mangonada",
+      "fr": "Mangonada"
+     },
+     "precio": 15.99
+    },
+    {
+     "imagen": "cat-pastel-de-chocolate",
+     "nombre": {
+      "es": "Pastel de chocolate",
+      "en": "Chocolate cake",
+      "fr": "Gâteau au chocolat"
+     },
+     "precio": 10.5
+    },
+    {
+     "imagen": "cat-tres-leches",
+     "nombre": {
+      "es": "Tres leches",
+      "en": "Tres leches cake",
+      "fr": "Gâteau tres leches"
+     },
+     "precio": 10.5
+    }
+   ]
+  }
+ ],
+ "abarrotes": [
+  {
+   "id": "botanas",
+   "titulo": {
+    "es": "Botanas",
+    "en": "Snacks",
+    "fr": "Grignotines"
+   },
+   "productos": [
+    {
+     "imagen": "cat-barcel-chipotles",
+     "nombre": {
+      "es": "Barcel Chipotles",
+      "en": "Barcel Chipotles",
+      "fr": "Barcel Chipotles"
+     },
+     "precio": 7.99
+    },
+    {
+     "imagen": "cat-barcel-chips-fuego-grandes",
+     "nombre": {
+      "es": "Barcel Chips Fuego grandes",
+      "en": "Barcel Chips Fuego, large",
+      "fr": "Barcel Chips Fuego, grand format"
+     },
+     "precio": 16.99
+    },
+    {
+     "imagen": "cat-barcel-chips-habanero-toreadas",
+     "nombre": {
+      "es": "Barcel Chips Habanero Toreadas",
+      "en": "Barcel Chips Habanero Toreadas",
+      "fr": "Barcel Chips Habanero Toreadas"
+     },
+     "precio": 16.99
+    },
+    {
+     "imagen": "cat-chapulines-bolsa",
+     "nombre": {
+      "es": "Chapulines (bolsa)",
+      "en": "Chapulines (grasshoppers), bag",
+      "fr": "Chapulines (sauterelles), sachet"
+     },
+     "precio": 71.5
+    },
+    {
+     "imagen": "cat-cheetos-bolita",
+     "nombre": {
+      "es": "Cheetos Bolita",
+      "en": "Cheetos Bolita",
+      "fr": "Cheetos Bolita"
+     },
+     "precio": 13.5
+    },
+    {
+     "imagen": "cat-cheetos-colmillos-grandes",
+     "nombre": {
+      "es": "Cheetos Colmillos grandes",
+      "en": "Cheetos Colmillos, large",
+      "fr": "Cheetos Colmillos, grand format"
+     },
+     "precio": 13.5
+    },
+    {
+     "imagen": "cat-cheetos-flamin-hot-grandes",
+     "nombre": {
+      "es": "Cheetos Flamin' Hot grandes",
+      "en": "Cheetos Flamin' Hot, large",
+      "fr": "Cheetos Flamin' Hot, grand format"
+     },
+     "precio": 13.5
+    },
+    {
+     "imagen": "cat-crujitos-grandes",
+     "nombre": {
+      "es": "Crujitos grandes",
+      "en": "Crujitos, large",
+      "fr": "Crujitos, grand format"
+     },
+     "precio": 13.5
+    },
+    {
+     "imagen": "cat-fritos-chile-y-limon-grandes",
+     "nombre": {
+      "es": "Fritos Chile y Limón grandes",
+      "en": "Fritos Chile y Limón, large",
+      "fr": "Fritos Chile y Limón, grand format"
+     },
+     "precio": 13.5
+    },
+    {
+     "imagen": "cat-paketaxo-grande",
+     "nombre": {
+      "es": "Paketaxo grande",
+      "en": "Paketaxo, large",
+      "fr": "Paketaxo, grand format"
+     },
+     "precio": 16.99
+    },
+    {
+     "imagen": "cat-palomitas",
+     "nombre": {
+      "es": "Palomitas",
+      "en": "Popcorn",
+      "fr": "Maïs soufflé"
+     },
+     "precio": 3.5
+    },
+    {
+     "imagen": "cat-ruffles-grandes",
+     "nombre": {
+      "es": "Ruffles grandes",
+      "en": "Ruffles, large",
+      "fr": "Ruffles, grand format"
+     },
+     "precio": 13.5
+    },
+    {
+     "imagen": "cat-tostitos",
+     "nombre": {
+      "es": "Tostitos",
+      "en": "Tostitos",
+      "fr": "Tostitos"
+     },
+     "precio": 10.5
+    },
+    {
+     "imagen": "cat-totis",
+     "nombre": {
+      "es": "Totis",
+      "en": "Totis",
+      "fr": "Totis"
+     },
+     "precio": 6.5
+    }
+   ]
+  },
+  {
+   "id": "dulces",
+   "titulo": {
+    "es": "Dulces y galletas empacadas",
+    "en": "Candy & packaged cookies",
+    "fr": "Bonbons et biscuits emballés"
+   },
+   "productos": [
+    {
+     "imagen": "cat-banderillas-de-tamarindo",
+     "nombre": {
+      "es": "Banderillas de tamarindo",
+      "en": "Tamarind banderillas (candy)",
+      "fr": "Banderillas au tamarin (bonbons)"
+     },
+     "precio": 2.99
+    },
+    {
+     "imagen": "cat-chicle-excel-menta",
+     "nombre": {
+      "es": "Chicle Excel Menta",
+      "en": "Excel gum, mint",
+      "fr": "Gomme Excel, menthe"
+     },
+     "precio": 1.99
+    },
+    {
+     "imagen": "cat-chicle-excel-menta",
+     "nombre": {
+      "es": "Chicle Excel Menta Polar",
+      "en": "Excel gum, polar mint",
+      "fr": "Gomme Excel, menthe polaire"
+     },
+     "precio": 1.99
+    },
+    {
+     "imagen": "cat-galleta-individual-gamesa-principe-arcoiris-barritas",
+     "nombre": {
+      "es": "Galleta individual Gamesa (Príncipe, Arcoíris, Barritas)",
+      "en": "Gamesa single cookies (Príncipe, Arcoíris, Barritas)",
+      "fr": "Biscuits individuels Gamesa (Príncipe, Arcoíris, Barritas)"
+     },
+     "precio": 3.99
+    },
+    {
+     "imagen": "cat-galletas-globitos",
+     "nombre": {
+      "es": "Galletas Globitos",
+      "en": "Globitos cookies",
+      "fr": "Biscuits Globitos"
+     },
+     "precio": 6.5
+    },
+    {
+     "imagen": "cat-marianitas-la-moderna-coco",
+     "nombre": {
+      "es": "Marianitas La Moderna Coco",
+      "en": "Marianitas La Moderna, coconut",
+      "fr": "Marianitas La Moderna, noix de coco"
+     },
+     "precio": 3.5
+    },
+    {
+     "imagen": "cat-marianitas-la-moderna-naranja",
+     "nombre": {
+      "es": "Marianitas La Moderna Naranja",
+      "en": "Marianitas La Moderna, orange",
+      "fr": "Marianitas La Moderna, orange"
+     },
+     "precio": 3.5
+    },
+    {
+     "imagen": "cat-marianitas-la-moderna-nuez",
+     "nombre": {
+      "es": "Marianitas La Moderna Nuez",
+      "en": "Marianitas La Moderna, nut",
+      "fr": "Marianitas La Moderna, noix"
+     },
+     "precio": 3.5
+    },
+    {
+     "imagen": "cat-miguelito-grande",
+     "nombre": {
+      "es": "Miguelito grande",
+      "en": "Miguelito, large",
+      "fr": "Miguelito, grand format"
+     },
+     "precio": 26.5
+    }
+   ]
+  },
+  {
+   "id": "bebidas",
+   "titulo": {
+    "es": "Bebidas",
+    "en": "Drinks",
+    "fr": "Boissons"
+   },
+   "productos": [
+    {
+     "imagen": "cat-bebida-de-coco",
+     "nombre": {
+      "es": "Bebida de coco",
+      "en": "Coconut drink",
+      "fr": "Boisson à la noix de coco"
+     },
+     "precio": 3.5
+    },
+    {
+     "imagen": "cat-cafe",
+     "nombre": {
+      "es": "Café",
+      "en": "Coffee",
+      "fr": "Café"
+     },
+     "precio": 3.99
+    },
+    {
+     "imagen": "cat-coca-de-vidrio",
+     "nombre": {
+      "es": "Coca de vidrio",
+      "en": "Coca-Cola, glass bottle",
+      "fr": "Coca-Cola en bouteille de verre"
+     },
+     "precio": 6.5
+    },
+    {
+     "imagen": "cat-dole-pina",
+     "nombre": {
+      "es": "Dole Piña",
+      "en": "Dole pineapple",
+      "fr": "Ananas Dole"
+     },
+     "precio": 5.99
+    },
+    {
+     "imagen": "cat-gatorade-amarillo",
+     "nombre": {
+      "es": "Gatorade Amarillo",
+      "en": "Gatorade, yellow",
+      "fr": "Gatorade jaune"
+     },
+     "precio": 2.99
+    },
+    {
+     "imagen": "cat-gatorade-amarillo",
+     "nombre": {
+      "es": "Gatorade Naranja",
+      "en": "Gatorade, orange",
+      "fr": "Gatorade orange"
+     },
+     "precio": 2.99
+    },
+    {
+     "imagen": "cat-jarrito",
+     "nombre": {
+      "es": "Jarrito",
+      "en": "Jarrito",
+      "fr": "Jarrito"
+     },
+     "precio": 6.5
+    },
+    {
+     "imagen": "cat-jarritos-grandes",
+     "nombre": {
+      "es": "Jarritos grandes",
+      "en": "Jarritos, large",
+      "fr": "Jarritos, grand format"
+     },
+     "precio": 10.5
+    },
+    {
+     "imagen": "cat-leche-sealtest",
+     "nombre": {
+      "es": "Leche Sealtest",
+      "en": "Sealtest milk",
+      "fr": "Lait Sealtest"
+     },
+     "precio": 12.99
+    },
+    {
+     "imagen": "cat-mundet",
+     "nombre": {
+      "es": "Mundet",
+      "en": "Mundet",
+      "fr": "Mundet"
+     },
+     "precio": 6.5
+    },
+    {
+     "imagen": "cat-pepsi",
+     "nombre": {
+      "es": "Pepsi",
+      "en": "Pepsi",
+      "fr": "Pepsi"
+     },
+     "precio": 4.99
+    },
+    {
+     "imagen": "cat-sangria-senorial",
+     "nombre": {
+      "es": "Sangría Señorial",
+      "en": "Sangría Señorial",
+      "fr": "Sangría Señorial"
+     },
+     "precio": 11.5
+    },
+    {
+     "imagen": "cat-tang-para-agua",
+     "nombre": {
+      "es": "Tang para agua",
+      "en": "Tang drink mix",
+      "fr": "Tang pour boisson"
+     },
+     "precio": 2.5
+    }
+   ]
+  },
+  {
+   "id": "abarrotes",
+   "titulo": {
+    "es": "Abarrotes",
+    "en": "Pantry",
+    "fr": "Épicerie"
+   },
+   "productos": [
+    {
+     "imagen": "cat-achiote-pequeno-el-yucateco",
+     "nombre": {
+      "es": "Achiote pequeño El Yucateco",
+      "en": "El Yucateco achiote, small",
+      "fr": "Achiote El Yucateco, petit"
+     },
+     "precio": 3.99
+    },
+    {
+     "imagen": "cat-crema-mexicana-mac-dairy",
+     "nombre": {
+      "es": "Crema mexicana Mac Dairy",
+      "en": "Mac Dairy Mexican cream",
+      "fr": "Crème mexicaine Mac Dairy"
+     },
+     "precio": 13.5
+    },
+    {
+     "imagen": "cat-fideos-la-moderna-6-3-oz",
+     "nombre": {
+      "es": "Fideos La Moderna 6.3 oz",
+      "en": "La Moderna fideo noodles 6.3 oz",
+      "fr": "Vermicelles La Moderna 6,3 oz"
+     },
+     "precio": 3.5
+    },
+    {
+     "imagen": "cat-mayonesa",
+     "nombre": {
+      "es": "Mayonesa",
+      "en": "Mayonnaise",
+      "fr": "Mayonnaise"
+     },
+     "precio": 19.5
+    },
+    {
+     "imagen": "cat-media-crema-mexicana",
+     "nombre": {
+      "es": "Media Crema mexicana",
+      "en": "Media Crema (Mexican table cream)",
+      "fr": "Media Crema (crème mexicaine)"
+     },
+     "precio": 15.99
+    },
+    {
+     "imagen": "cat-salsa-verde-la-costena-455-ml",
+     "nombre": {
+      "es": "Salsa Verde La Costeña 455 ml",
+      "en": "La Costeña green salsa 455 ml",
+      "fr": "Salsa verte La Costeña 455 ml"
+     },
+     "precio": 7.5
+    },
+    {
+     "imagen": "cat-sardina",
+     "nombre": {
+      "es": "Sardina",
+      "en": "Sardines",
+      "fr": "Sardines"
+     },
+     "precio": 9.99
+    },
+    {
+     "imagen": "cat-sazonador",
+     "nombre": {
+      "es": "Sazonador",
+      "en": "Seasoning",
+      "fr": "Assaisonnement"
+     },
+     "precio": 14.5
+    },
+    {
+     "imagen": "cat-shampoo-risitos-de-oro-todos",
+     "nombre": {
+      "es": "Shampoo Risitos de Oro (todos)",
+      "en": "Risitos de Oro shampoo (all kinds)",
+      "fr": "Shampooing Risitos de Oro (tous)"
+     },
+     "precio": 10.5
+    },
+    {
+     "imagen": "cat-tajin-chico",
+     "nombre": {
+      "es": "Tajín chico",
+      "en": "Tajín, small",
+      "fr": "Tajín, petit"
+     },
+     "precio": 9.5
+    },
+    {
+     "imagen": "cat-valentina-grande",
+     "nombre": {
+      "es": "Valentina grande",
+      "en": "Valentina hot sauce, large",
+      "fr": "Sauce Valentina, grand format"
+     },
+     "precio": 11.5
+    }
+   ]
+  }
+ ]
+}

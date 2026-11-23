@@ -490,20 +490,44 @@ p { text-wrap: pretty; }
 .seccion.blanca .lista-productos li { background: var(--rosa-claro); }
 .lista-productos .producto { display: block; font-weight: 800; }
 .lista-productos .detalle { display: block; font-size: 0.95rem; }
-.lista-productos .precio { display: block; margin-top: 6px; font-weight: 800; color: var(--rojo); }
 
-/* Descargas en PDF */
-.descargas { text-align: center; }
-.descargas p { max-width: 620px; margin: 0 auto 8px; }
-.botones-pdf {
+/* Tarjetas de productos con foto y precio */
+.tarjetas-producto {
   list-style: none;
   padding: 0;
-  margin: 24px 0 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 12px;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(165px, 100%), 1fr));
+  gap: 16px;
 }
+.tarjetas-producto.grandes { grid-template-columns: repeat(auto-fill, minmax(min(260px, 100%), 1fr)); gap: 20px; }
+.tarjetas-producto > li {
+  display: flex;
+  flex-direction: column;
+  background: var(--blanco);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--sombra);
+  border-bottom: 5px solid var(--amarillo);
+}
+.tarjetas-producto > li:nth-child(2n) { border-bottom-color: var(--verde); }
+.tarjetas-producto > li:nth-child(3n) { border-bottom-color: var(--rojo); }
+.seccion.blanca .tarjetas-producto > li { background: var(--rosa-claro); }
+.tarjetas-producto img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+  background: var(--blanco);
+}
+.tarjetas-producto.grandes img { aspect-ratio: 16 / 10; }
+.producto-texto { display: flex; flex-direction: column; gap: 4px; padding: 12px 14px 14px; flex: 1; }
+.producto-texto h3 { margin: 0; font-family: inherit; font-size: 1rem; font-weight: 800; line-height: 1.25; color: inherit; }
+.grandes .producto-texto h3 { font-size: 1.15rem; }
+.producto-desc { margin: 0; font-size: 0.92rem; }
+.producto-precio { margin: auto 0 0; padding-top: 6px; font-weight: 800; font-size: 1.1rem; color: var(--rojo); }
+.grandes .producto-precio { font-size: 1.15rem; }
 
 /* Galería */
 .galeria {

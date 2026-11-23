@@ -8,64 +8,15 @@
 
 {{> temporada}}
 
-    <section class="seccion" aria-labelledby="pan-dulce">
-      <div class="contenedor">
-        <header class="titulo"><h2 id="pan-dulce">{{t.pan.dulce}}</h2><span class="adorno" aria-hidden="true"></span></header>
-        <ul class="productos-foto">
-          <li class="aparecer">
-            {{img concha-rosa alt=fotos.conchaRosa sizes="(min-width: 1120px) 340px, (min-width: 700px) 45vw, 100vw"}}
-            <div><h3>{{t.pan.concha}}</h3><p>{{t.pan.conchaFoto}}</p></div>
-          </li>
-          <li class="aparecer">
-            {{img galletas alt=fotos.galletas sizes="(min-width: 1120px) 340px, (min-width: 700px) 45vw, 100vw"}}
-            <div><h3>{{t.pan.galleta}}</h3><p>{{t.pan.galletaD}}</p></div>
-          </li>
-        </ul>
-        <ul class="lista-productos">
-          <li><span class="producto">{{t.pan.cuernito}}</span><span class="detalle">{{t.pan.cuernitoD}}</span></li>
-          <li><span class="producto">{{t.pan.oreja}}</span><span class="detalle">{{t.pan.orejaD}}</span></li>
-          <li><span class="producto">{{t.pan.polvoron}}</span><span class="detalle">{{t.pan.polvoronD}}</span></li>
-          <li><span class="producto">{{t.pan.marranito}}</span><span class="detalle">{{t.pan.marranitoD}}</span></li>
-          <li><span class="producto">{{t.pan.dona}}</span><span class="detalle">{{t.pan.donaD}}</span></li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="seccion blanca" aria-labelledby="pan-salado">
-      <div class="contenedor">
-        <header class="titulo"><h2 id="pan-salado">{{t.pan.salado}}</h2><span class="adorno" aria-hidden="true"></span></header>
-        <ul class="productos-foto">
-          <li class="aparecer">
-            {{img bolillos alt=fotos.bolillos sizes="(min-width: 1120px) 340px, (min-width: 700px) 45vw, 100vw"}}
-            <div><h3>{{t.pan.bolillo}}</h3><p>{{t.pan.bolilloFoto}}</p></div>
-          </li>
-        </ul>
-        <ul class="lista-productos">
-          <li><span class="producto">{{t.pan.telera}}</span><span class="detalle">{{t.pan.teleraD}}</span></li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="seccion" aria-labelledby="pan-temporada">
-      <div class="contenedor">
-        <header class="titulo"><h2 id="pan-temporada">{{t.pan.temporada}}</h2><span class="adorno" aria-hidden="true"></span></header>
-        <ul class="productos-foto">
-          <li class="aparecer">
-            {{img pan-de-muerto-concha alt=fotos.muertoConcha sizes="(min-width: 1120px) 340px, (min-width: 700px) 45vw, 100vw"}}
-            <div><h3>{{t.pan.muertoConcha}}</h3><p>{{t.pan.muertoConchaD}}</p></div>
-          </li>
-        </ul>
-        <ul class="lista-productos">
-          <li><span class="producto">{{t.pan.muerto}}</span><span class="detalle">{{t.pan.muertoD}}</span></li>
-          <li><span class="producto">{{t.pan.rosca}}</span><span class="detalle">{{t.pan.roscaD}}</span></li>
-        </ul>
-      </div>
-    </section>
+{{productos pan}}
 
     <section class="seccion blanca" aria-labelledby="galeria-titulo">
       <div class="contenedor">
         <header class="titulo"><h2 id="galeria-titulo">{{t.galeria.titulo}}</h2><span class="adorno" aria-hidden="true"></span></header>
         <div class="galeria">
+          <figure class="aparecer">{{img concha-rosa alt=fotos.conchaRosa sizes="(min-width: 1120px) 350px, (min-width: 600px) 45vw, 100vw"}}<figcaption>{{t.fotos.conchaRosa}}</figcaption></figure>
+          <figure class="aparecer">{{img galletas alt=fotos.galletas sizes="(min-width: 1120px) 350px, (min-width: 600px) 45vw, 100vw"}}<figcaption>{{t.fotos.galletas}}</figcaption></figure>
+          <figure class="aparecer">{{img bolillos alt=fotos.bolillos sizes="(min-width: 1120px) 350px, (min-width: 600px) 45vw, 100vw"}}<figcaption>{{t.fotos.bolillos}}</figcaption></figure>
           <figure class="aparecer">{{img concha-con-leche alt=fotos.conchaLeche sizes="(min-width: 1120px) 350px, (min-width: 600px) 45vw, 100vw"}}<figcaption>{{t.fotos.conchaLeche}}</figcaption></figure>
           <figure class="aparecer">{{img pan-de-muerto-ajonjoli alt=fotos.muertoAjonjoli sizes="(min-width: 1120px) 350px, (min-width: 600px) 45vw, 100vw"}}<figcaption>{{t.fotos.muertoAjonjoli}}</figcaption></figure>
           <figure class="aparecer">{{img pan-de-muerto-concha alt=fotos.muertoConcha sizes="(min-width: 1120px) 350px, (min-width: 600px) 45vw, 100vw"}}<figcaption>{{t.fotos.muertoConcha}}</figcaption></figure>
@@ -75,8 +26,6 @@
         </div>
       </div>
     </section>
-
-{{> descargas}}
 
     <section class="seccion nota">
       <div class="contenedor"><p>{{t.pan.nota}}</p></div>
