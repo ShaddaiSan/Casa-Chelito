@@ -264,7 +264,7 @@ p { text-wrap: pretty; }
 .boton-menu[aria-expanded="true"] .hamburguesa::before { transform: translateY(7px) rotate(45deg); }
 .boton-menu[aria-expanded="true"] .hamburguesa::after { transform: translateY(-7px) rotate(-45deg); }
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
   /* Sin JS el menú queda siempre visible debajo del logo (y no fijo, para no tapar la pantalla) */
   .no-js .encabezado { position: static; }
   .navegacion {
@@ -401,7 +401,7 @@ p { text-wrap: pretty; }
 /* Destacados (pan, paletas y abarrotes) */
 .destacados {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
   gap: 24px;
 }
 
@@ -416,6 +416,7 @@ p { text-wrap: pretty; }
 }
 
 .destacado:hover { translate: 0 -4px; }
+.destacado.menu-comida { background: var(--rojo-oscuro); }
 .destacado.pan { background: var(--rojo); }
 .destacado.paletas { background: var(--verde); }
 .destacado.abarrotes { background: var(--naranja-oscuro); }
@@ -501,7 +502,9 @@ p { text-wrap: pretty; }
   gap: 16px;
 }
 .tarjetas-producto.grandes { grid-template-columns: repeat(auto-fill, minmax(min(260px, 100%), 1fr)); gap: 20px; }
-.tarjetas-producto > li {
+.tarjetas-producto > li { display: flex; }
+.tarjetas-producto article {
+  flex: 1;
   display: flex;
   flex-direction: column;
   background: var(--blanco);
@@ -510,9 +513,19 @@ p { text-wrap: pretty; }
   box-shadow: var(--sombra);
   border-bottom: 5px solid var(--amarillo);
 }
-.tarjetas-producto > li:nth-child(2n) { border-bottom-color: var(--verde); }
-.tarjetas-producto > li:nth-child(3n) { border-bottom-color: var(--rojo); }
-.seccion.blanca .tarjetas-producto > li { background: var(--rosa-claro); }
+.tarjetas-producto > li:nth-child(2n) article { border-bottom-color: var(--verde); }
+.tarjetas-producto > li:nth-child(3n) article { border-bottom-color: var(--rojo); }
+.seccion.blanca .tarjetas-producto article { background: var(--rosa-claro); }
+.seccion .titulo .aviso-precios {
+  max-width: 640px;
+  margin: 16px auto 0;
+  padding: 12px 18px;
+  border-radius: 14px;
+  background: var(--blanco);
+  border-left: 5px solid var(--amarillo);
+  font-weight: 700;
+  text-align: left;
+}
 .tarjetas-producto img {
   display: block;
   width: 100%;

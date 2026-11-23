@@ -153,12 +153,17 @@ def productos(grupo, lang, base):
         for p in sec["productos"]:
             nombre = p["nombre"][lang]
             desc = f'<p class="producto-desc">{html.escape(p["descripcion"][lang])}</p>' if p.get("descripcion") else ""
-            precio = "<br>".join(html.escape(l) for l in lineas_precio(p["precio"], lang))
+            precio = ""
+            if "precio" in p:
+                if isinstance(p["precio"], (int, float)):
+                    texto = f'<data value="{float(p["precio"]):.2f}">{html.escape(formato_precio(p["precio"], lang))}</data>'
+                else:
+                    texto = "<br>".join(html.escape(l) for l in lineas_precio(p["precio"], lang))
+                precio = f'<p class="producto-precio">{texto}</p>'
             tarjetas.append(
-                f'          <li>{imagen(p["imagen"], lang, base, sizes=sizes, alt_texto=nombre)}'
-                f'<div class="producto-texto"><h3>{html.escape(nombre)}</h3>{desc}'
-                f'<p class="producto-precio">{precio}</p></div></li>')
-        nota = f'<p>{{{{t.precios.nota}}}}</p>' if i == 0 else ""
+                f'          <li><article>{imagen(p["imagen"], lang, base, sizes=sizes, alt_texto=nombre)}'
+                f'<div class="producto-texto"><h3>{html.escape(nombre)}</h3>{desc}{precio}</div></article></li>')
+        nota = '<p class="aviso-precios" role="note">{{t.precios.nota}}</p>' if i == 0 else ""
         secciones.append(f'''
     <section class="seccion{" blanca" if i % 2 else ""}" aria-labelledby="sec-{sec["id"]}">
       <div class="contenedor">
@@ -170,6 +175,56 @@ def productos(grupo, lang, base):
     </section>
 ''')
     return "".join(secciones)
+
+
+def url_imagen(nombre):
+    return CONFIG["url"] + f"assets/img/{nombre}-{anchos_para(DIMENSIONES[nombre][0])[-1]}.jpg"
+
+
+def precio_base(p):
+    """Primer precio numérico del producto (para los datos estructurados)."""
+    if isinstance(p.get("precio"), (int, float)):
+        return float(p["precio"])
+    if isinstance(p.get("precio"), dict):
+        m = re.search(r"\{([\d.]+)\}", p["precio"]["es"][0])
+        return float(m.group(1)) if m else None
+    return None
+
+
+def oferta(p, lang):
+    valor = precio_base(p)
+    o = {"@type": "Offer", "priceCurrency": "CAD", "availability": "https://schema.org/InStoreOnly"}
+    if valor is not None:
+        o["price"] = f"{valor:.2f}"
+    return o
+
+
+def jsonld_productos(grupo, lang, pid):
+    url = url_absoluta(lang, pid)
+    if grupo == "menu":
+        datos = {
+            "@context": "https://schema.org", "@type": "Menu", "name": TEXTOS[lang]["menu.titulo"],
+            "url": url, "inLanguage": lang,
+            "hasMenuSection": [{
+                "@type": "MenuSection", "name": sec["titulo"][lang],
+                "hasMenuItem": [dict({"@type": "MenuItem", "name": p["nombre"][lang], "image": url_imagen(p["imagen"]),
+                                      "offers": oferta(p, lang)},
+                                     **({"description": p["descripcion"][lang]} if p.get("descripcion") else {}))
+                                for p in sec["productos"]]}
+                for sec in PRODUCTOS[grupo]],
+        }
+    else:
+        datos = {
+            "@context": "https://schema.org", "@type": "OfferCatalog", "name": TEXTOS[lang][f"nav.{pid}"],
+            "url": url, "inLanguage": lang,
+            "itemListElement": [{
+                "@type": "OfferCatalog", "name": sec["titulo"][lang],
+                "itemListElement": [dict(oferta(p, lang), itemOffered={
+                    "@type": "Product", "name": p["nombre"][lang], "image": url_imagen(p["imagen"])})
+                    for p in sec["productos"]]}
+                for sec in PRODUCTOS[grupo]],
+        }
+    return '<script type="application/ld+json">' + json.dumps(datos, ensure_ascii=False) + "</script>"
 
 
 # ---------- Plantillas ----------
@@ -274,6 +329,8 @@ def datos_estructurados(lang):
         "image": CONFIG["url"] + "assets/img/logo-500.png",
         "description": TEXTOS[lang]["meta.descInicio"],
         "servesCuisine": "Mexican",
+        "priceRange": "$",
+        "hasMenu": url_absoluta(lang, "menu"),
         "address": {"@type": "PostalAddress", "streetAddress": CONFIG["calle"],
                     "addressLocality": CONFIG["ciudad"], "addressRegion": CONFIG["region"],
                     "postalCode": CONFIG["codigo_postal"], "addressCountry": CONFIG["pais"]},
@@ -314,7 +371,8 @@ def construir():
                       .replace("{{titulo}}", html.escape(titulo))
                       .replace("{{descripcion}}", html.escape(t[clave_desc]))
                       .replace("{{canonica}}", url_absoluta(lang, pid))
-                      .replace("{{jsonld}}", datos_estructurados(lang) if pid == "inicio" else "")
+                      .replace("{{jsonld}}", datos_estructurados(lang) if pid == "inicio" else
+                               jsonld_productos(pid, lang, pid) if pid in PRODUCTOS else "")
                       .replace("{{pagina}}", pid))
             (OUT / lang / archivo).write_text(renderizar(pagina, lang, "../", pid))
 

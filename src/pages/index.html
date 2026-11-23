@@ -24,8 +24,16 @@
           <span class="adorno" aria-hidden="true"></span>
         </header>
         <div class="destacados">
+          <article class="destacado menu-comida aparecer">
+            {{img menu-tamales alt=fotos.menuTamales class="foto-destacado" sizes="(min-width: 1120px) 260px, (min-width: 700px) 45vw, 100vw"}}
+            <div class="destacado-cuerpo">
+              <h3>{{t.inicio.menuTitulo}}</h3>
+              <p>{{t.inicio.menuTexto}}</p>
+              <a class="boton claro" href="menu.html">{{t.inicio.verMas}}<span class="visualmente-oculto"> — {{t.inicio.menuTitulo}}</span></a>
+            </div>
+          </article>
           <article class="destacado pan aparecer">
-            {{img concha-con-leche alt=fotos.conchaLeche class="foto-destacado" sizes="(min-width: 1120px) 340px, (min-width: 700px) 45vw, 100vw"}}
+            {{img concha-con-leche alt=fotos.conchaLeche class="foto-destacado" sizes="(min-width: 1120px) 260px, (min-width: 700px) 45vw, 100vw"}}
             <div class="destacado-cuerpo">
               <h3>{{t.inicio.panTitulo}}</h3>
               <p>{{t.inicio.panTexto}}</p>
@@ -33,7 +41,7 @@
             </div>
           </article>
           <article class="destacado paletas aparecer">
-            {{img paletas-fila alt=fotos.paletasFila class="foto-destacado" sizes="(min-width: 1120px) 340px, (min-width: 700px) 45vw, 100vw"}}
+            {{img paletas-fila alt=fotos.paletasFila class="foto-destacado" sizes="(min-width: 1120px) 260px, (min-width: 700px) 45vw, 100vw"}}
             <div class="destacado-cuerpo">
               <h3>{{t.inicio.paletasTitulo}}</h3>
               <p>{{t.inicio.paletasTexto}}</p>
@@ -41,7 +49,7 @@
             </div>
           </article>
           <article class="destacado abarrotes aparecer">
-            {{img estante-abarrotes alt=fotos.estanteAbarrotes class="foto-destacado" sizes="(min-width: 1120px) 340px, (min-width: 700px) 45vw, 100vw"}}
+            {{img estante-abarrotes alt=fotos.estanteAbarrotes class="foto-destacado" sizes="(min-width: 1120px) 260px, (min-width: 700px) 45vw, 100vw"}}
             <div class="destacado-cuerpo">
               <h3>{{t.inicio.abarrotesTitulo}}</h3>
               <p>{{t.inicio.abarrotesTexto}}</p>

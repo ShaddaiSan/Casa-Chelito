@@ -206,6 +206,9 @@
   "meta.descMenu": "Le menu de Casa Chelito à Montréal : tamales, tortas au tamal, ceviche, cocktail de crevettes, carnitas, combos d'ailes, chocoflan, tejuino et mangonada.",
   "menu.eslogan": "À table !",
   "menu.titulo": "Notre menu",
-  "menu.lead": "Cuisine mexicaine maison. Prix en dollars canadiens; commandez par téléphone pour emporter ou en livraison.",
-  "precios.nota": "Prix en dollars canadiens (CAD); sujets à changement sans préavis."
+  "menu.lead": "Cuisine mexicaine maison. Commandez par téléphone pour emporter ou en livraison.",
+  "precios.nota": "Prix en ligne, en dollars canadiens (CAD). Les prix en ligne et des commandes en ligne peuvent différer des prix en magasin.",
+  "inicio.menuTitulo": "Menu",
+  "inicio.menuTexto": "Tamales, ceviche, carnitas, combos d'ailes, chocoflan et mangonada.",
+  "fotos.menuTamales": "Tamales dans des feuilles de maïs"
 }

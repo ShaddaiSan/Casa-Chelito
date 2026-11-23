@@ -206,6 +206,9 @@
   "meta.descMenu": "Menú de Casa Chelito en Montreal: tamales, tortas de tamal, ceviche, cóctel de camarón, carnitas, combos de alitas, chocoflan, tejuino y mangonada.",
   "menu.eslogan": "¡Ya está la comida!",
   "menu.titulo": "Nuestro menú",
-  "menu.lead": "Comida mexicana hecha en casa. Precios en dólares canadienses; pide por teléfono para llevar o a domicilio.",
-  "precios.nota": "Precios en dólares canadienses (CAD); pueden cambiar sin previo aviso."
+  "menu.lead": "Comida mexicana hecha en casa. Pide por teléfono para llevar o a domicilio.",
+  "precios.nota": "Precios en línea, en dólares canadienses (CAD). El precio en línea y de los pedidos en línea puede variar del precio en la tienda.",
+  "inicio.menuTitulo": "Menú de comida",
+  "inicio.menuTexto": "Tamales, ceviche, carnitas, combos de alitas, chocoflan y mangonada.",
+  "fotos.menuTamales": "Tamales en hoja de maíz"
 }

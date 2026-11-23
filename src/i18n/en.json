@@ -206,6 +206,9 @@
   "meta.descMenu": "Casa Chelito's menu in Montreal: tamales, tamal tortas, ceviche, shrimp cocktail, carnitas, chicken wing combos, chocoflan, tejuino and mangonada.",
   "menu.eslogan": "Food's ready!",
   "menu.titulo": "Our menu",
-  "menu.lead": "Homemade Mexican food. Prices in Canadian dollars; order by phone for pickup or delivery.",
-  "precios.nota": "Prices in Canadian dollars (CAD); subject to change without notice."
+  "menu.lead": "Homemade Mexican food. Order by phone for pickup or delivery.",
+  "precios.nota": "Online prices, in Canadian dollars (CAD). Online and online-order prices may differ from in-store prices.",
+  "inicio.menuTitulo": "Food menu",
+  "inicio.menuTexto": "Tamales, ceviche, carnitas, wing combos, chocoflan and mangonada.",
+  "fotos.menuTamales": "Tamales in corn husks"
 }

@@ -44,19 +44,10 @@
     <section class="seccion blanca" aria-labelledby="helados-titulo">
       <div class="contenedor">
         <header class="titulo"><h2 id="helados-titulo">{{t.helados.titulo}}</h2><p>{{t.helados.texto}}</p><span class="adorno" aria-hidden="true"></span></header>
-        <ul class="productos-foto">
-          <li class="aparecer">
-            {{img helados-congelador alt=fotos.heladosCongelador sizes="(min-width: 1120px) 350px, (min-width: 600px) 45vw, 100vw"}}
-            <div><h3>{{t.helados.bola}}</h3><p>{{t.helados.bolaD}}</p></div>
-          </li>
-          <li class="aparecer">
-            {{img helado-suave alt=fotos.heladoSuave sizes="(min-width: 1120px) 350px, (min-width: 600px) 45vw, 100vw"}}
-            <div><h3>{{t.helados.suave}}</h3><p>{{t.helados.suaveD}}</p></div>
-          </li>
-          <li class="aparecer">
-            {{img carrito-paletero alt=fotos.carrito sizes="(min-width: 1120px) 350px, (min-width: 600px) 45vw, 100vw"}}
-            <div><h3>{{t.paletas.carrito}}</h3><p>{{t.paletas.carritoD}}</p></div>
-          </li>
+        <ul class="tarjetas-producto grandes">
+          <li><article>{{img helados-congelador alt=fotos.heladosCongelador sizes="(min-width: 1120px) 340px, (min-width: 700px) 30vw, 100vw"}}<div class="producto-texto"><h3>{{t.helados.bola}}</h3><p class="producto-desc">{{t.helados.bolaD}}</p></div></article></li>
+          <li><article>{{img helado-suave alt=fotos.heladoSuave sizes="(min-width: 1120px) 340px, (min-width: 700px) 30vw, 100vw"}}<div class="producto-texto"><h3>{{t.helados.suave}}</h3><p class="producto-desc">{{t.helados.suaveD}}</p></div></article></li>
+          <li><article>{{img carrito-paletero alt=fotos.carrito sizes="(min-width: 1120px) 340px, (min-width: 700px) 30vw, 100vw"}}<div class="producto-texto"><h3>{{t.paletas.carrito}}</h3><p class="producto-desc">{{t.paletas.carritoD}}</p></div></article></li>
         </ul>
       </div>
     </section>
