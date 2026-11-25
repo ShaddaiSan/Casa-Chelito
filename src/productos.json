@@ -277,7 +277,7 @@
       "en": "Guatemalan churro, pack of 5",
       "fr": "Churro du Guatemala, paquet de 5"
      },
-     "precio": 6.5
+     "precio": 4.55
     },
     {
      "imagen": "cat-concha-unidad",
@@ -286,7 +286,7 @@
       "en": "Concha (each)",
       "fr": "Concha (unité)"
      },
-     "precio": 3.5
+     "precio": 2.45
     },
     {
      "imagen": "cat-conchas-x4",
@@ -295,7 +295,7 @@
       "en": "Conchas, pack of 4",
       "fr": "Conchas, paquet de 4"
      },
-     "precio": 13.5
+     "precio": 9.45
     },
     {
      "imagen": "cat-cuernitos-unidad",
@@ -304,7 +304,7 @@
       "en": "Cuernito (each)",
       "fr": "Cuernito (unité)"
      },
-     "precio": 2.99
+     "precio": 2.09
     },
     {
      "imagen": "cat-cuernitos-unidad",
@@ -313,7 +313,7 @@
       "en": "Cuernitos, pack of 4",
       "fr": "Cuernitos, paquet de 4"
      },
-     "precio": 10.5
+     "precio": 7.35
     },
     {
      "imagen": "cat-galleta-arcoiris-x5",
@@ -322,7 +322,7 @@
       "en": "Arcoíris cookies, pack of 5",
       "fr": "Biscuits Arcoíris, paquet de 5"
      },
-     "precio": 7.99
+     "precio": 5.59
     },
     {
      "imagen": "cat-galleta-champurrada-x5",
@@ -331,7 +331,7 @@
       "en": "Champurrada cookies, pack of 5",
       "fr": "Biscuits champurrada, paquet de 5"
      },
-     "precio": 6.5
+     "precio": 4.55
     },
     {
      "imagen": "cat-galletas-unidad",
@@ -340,7 +340,7 @@
       "en": "Cookie (each)",
       "fr": "Biscuit (unité)"
      },
-     "precio": 1.5
+     "precio": 1.05
     },
     {
      "imagen": "cat-galletas-polvoron-x5",
@@ -349,7 +349,7 @@
       "en": "Polvorón cookies, pack of 5",
       "fr": "Biscuits polvorón, paquet de 5"
      },
-     "precio": 6.5
+     "precio": 4.55
     },
     {
      "imagen": "cat-muffin-unidad",
@@ -358,7 +358,7 @@
       "en": "Muffin (each)",
       "fr": "Muffin (unité)"
      },
-     "precio": 1.99
+     "precio": 1.39
     },
     {
      "imagen": "cat-muffin-unidad",
@@ -367,7 +367,7 @@
       "en": "Muffins, pack of 4",
       "fr": "Muffins, paquet de 4"
      },
-     "precio": 5.99
+     "precio": 4.19
     },
     {
      "imagen": "cat-pan-brioche",
@@ -376,7 +376,7 @@
       "en": "Brioche bread",
       "fr": "Pain brioché"
      },
-     "precio": 13.99
+     "precio": 9.79
     },
     {
      "imagen": "cat-pan-de-canela-x5",
@@ -385,7 +385,7 @@
       "en": "Cinnamon bread, pack of 5",
       "fr": "Pain à la cannelle, paquet de 5"
      },
-     "precio": 10.5
+     "precio": 7.35
     },
     {
      "imagen": "cat-pan-de-muerto-grande",
@@ -394,7 +394,7 @@
       "en": "Pan de muerto, large",
       "fr": "Pan de muerto, grand"
      },
-     "precio": 19.5
+     "precio": 13.65
     },
     {
      "imagen": "cat-pan-de-muerto-pequeno",
@@ -403,7 +403,7 @@
       "en": "Pan de muerto, small",
       "fr": "Pan de muerto, petit"
      },
-     "precio": 6.5
+     "precio": 4.55
     },
     {
      "imagen": "cat-pan-mixto",
@@ -412,7 +412,7 @@
       "en": "Assorted bread",
       "fr": "Pains assortis"
      },
-     "precio": 13.5
+     "precio": 9.45
     },
     {
      "imagen": "cat-telera-o-bolillo-unidad",
@@ -421,7 +421,7 @@
       "en": "Telera or bolillo roll (each)",
       "fr": "Pain telera ou bolillo (unité)"
      },
-     "precio": 1.5
+     "precio": 1.05
     },
     {
      "imagen": "cat-telera-o-bolillo-x4",
@@ -430,7 +430,7 @@
       "en": "Telera or bolillo rolls, pack of 4",
       "fr": "Pains telera ou bolillo, paquet de 4"
      },
-     "precio": 5.5
+     "precio": 3.85
     }
    ]
   },
@@ -449,7 +449,7 @@
       "en": "Rice pudding (arroz con leche)",
       "fr": "Riz au lait (arroz con leche)"
      },
-     "precio": 9.5
+     "precio": 6.65
     },
     {
      "imagen": "cat-chocoflan",
@@ -458,7 +458,7 @@
       "en": "Chocoflan",
       "fr": "Chocoflan"
      },
-     "precio": 15.99
+     "precio": 11.19
     },
     {
      "imagen": "cat-flan-napolitano",
@@ -467,7 +467,7 @@
       "en": "Flan napolitano",
       "fr": "Flan napolitano"
      },
-     "precio": 10.5
+     "precio": 7.35
     },
     {
      "imagen": "cat-gelatina-mosaico",
@@ -476,7 +476,7 @@
       "en": "Mosaic gelatin",
       "fr": "Gélatine mosaïque"
      },
-     "precio": 9.5
+     "precio": 6.65
     },
     {
      "imagen": "cat-mangonada",
@@ -485,7 +485,7 @@
       "en": "Mangonada",
       "fr": "Mangonada"
      },
-     "precio": 15.99
+     "precio": 11.19
     },
     {
      "imagen": "cat-pastel-de-chocolate",
@@ -494,7 +494,7 @@
       "en": "Chocolate cake",
       "fr": "Gâteau au chocolat"
      },
-     "precio": 10.5
+     "precio": 7.35
     },
     {
      "imagen": "cat-tres-leches",
@@ -503,7 +503,7 @@
       "en": "Tres leches cake",
       "fr": "Gâteau tres leches"
      },
-     "precio": 10.5
+     "precio": 7.35
     }
    ]
   }
@@ -524,7 +524,7 @@
       "en": "Barcel Chipotles",
       "fr": "Barcel Chipotles"
      },
-     "precio": 7.99
+     "precio": 5.59
     },
     {
      "imagen": "cat-barcel-chips-fuego-grandes",
@@ -533,7 +533,7 @@
       "en": "Barcel Chips Fuego, large",
       "fr": "Barcel Chips Fuego, grand format"
      },
-     "precio": 16.99
+     "precio": 11.89
     },
     {
      "imagen": "cat-barcel-chips-habanero-toreadas",
@@ -542,7 +542,7 @@
       "en": "Barcel Chips Habanero Toreadas",
       "fr": "Barcel Chips Habanero Toreadas"
      },
-     "precio": 16.99
+     "precio": 11.89
     },
     {
      "imagen": "cat-chapulines-bolsa",
@@ -551,7 +551,7 @@
       "en": "Chapulines (grasshoppers), bag",
       "fr": "Chapulines (sauterelles), sachet"
      },
-     "precio": 71.5
+     "precio": 50.05
     },
     {
      "imagen": "cat-cheetos-bolita",
@@ -560,7 +560,7 @@
       "en": "Cheetos Bolita",
       "fr": "Cheetos Bolita"
      },
-     "precio": 13.5
+     "precio": 9.45
     },
     {
      "imagen": "cat-cheetos-colmillos-grandes",
@@ -569,7 +569,7 @@
       "en": "Cheetos Colmillos, large",
       "fr": "Cheetos Colmillos, grand format"
      },
-     "precio": 13.5
+     "precio": 9.45
     },
     {
      "imagen": "cat-cheetos-flamin-hot-grandes",
@@ -578,7 +578,7 @@
       "en": "Cheetos Flamin' Hot, large",
       "fr": "Cheetos Flamin' Hot, grand format"
      },
-     "precio": 13.5
+     "precio": 9.45
     },
     {
      "imagen": "cat-crujitos-grandes",
@@ -587,7 +587,7 @@
       "en": "Crujitos, large",
       "fr": "Crujitos, grand format"
      },
-     "precio": 13.5
+     "precio": 9.45
     },
     {
      "imagen": "cat-fritos-chile-y-limon-grandes",
@@ -596,7 +596,7 @@
       "en": "Fritos Chile y Limón, large",
       "fr": "Fritos Chile y Limón, grand format"
      },
-     "precio": 13.5
+     "precio": 9.45
     },
     {
      "imagen": "cat-paketaxo-grande",
@@ -605,7 +605,7 @@
       "en": "Paketaxo, large",
       "fr": "Paketaxo, grand format"
      },
-     "precio": 16.99
+     "precio": 11.89
     },
     {
      "imagen": "cat-palomitas",
@@ -614,7 +614,7 @@
       "en": "Popcorn",
       "fr": "Maïs soufflé"
      },
-     "precio": 3.5
+     "precio": 2.45
     },
     {
      "imagen": "cat-ruffles-grandes",
@@ -623,7 +623,7 @@
       "en": "Ruffles, large",
       "fr": "Ruffles, grand format"
      },
-     "precio": 13.5
+     "precio": 9.45
     },
     {
      "imagen": "cat-tostitos",
@@ -632,7 +632,7 @@
       "en": "Tostitos",
       "fr": "Tostitos"
      },
-     "precio": 10.5
+     "precio": 7.35
     },
     {
      "imagen": "cat-totis",
@@ -641,7 +641,7 @@
       "en": "Totis",
       "fr": "Totis"
      },
-     "precio": 6.5
+     "precio": 4.55
     }
    ]
   },
@@ -660,7 +660,7 @@
       "en": "Tamarind banderillas (candy)",
       "fr": "Banderillas au tamarin (bonbons)"
      },
-     "precio": 2.99
+     "precio": 2.09
     },
     {
      "imagen": "cat-chicle-excel-menta",
@@ -669,7 +669,7 @@
       "en": "Excel gum, mint",
       "fr": "Gomme Excel, menthe"
      },
-     "precio": 1.99
+     "precio": 1.39
     },
     {
      "imagen": "cat-chicle-excel-menta",
@@ -678,7 +678,7 @@
       "en": "Excel gum, polar mint",
       "fr": "Gomme Excel, menthe polaire"
      },
-     "precio": 1.99
+     "precio": 1.39
     },
     {
      "imagen": "cat-galleta-individual-gamesa-principe-arcoiris-barritas",
@@ -687,7 +687,7 @@
       "en": "Gamesa single cookies (Príncipe, Arcoíris, Barritas)",
       "fr": "Biscuits individuels Gamesa (Príncipe, Arcoíris, Barritas)"
      },
-     "precio": 3.99
+     "precio": 2.79
     },
     {
      "imagen": "cat-galletas-globitos",
@@ -696,7 +696,7 @@
       "en": "Globitos cookies",
       "fr": "Biscuits Globitos"
      },
-     "precio": 6.5
+     "precio": 4.55
     },
     {
      "imagen": "cat-marianitas-la-moderna-coco",
@@ -705,7 +705,7 @@
       "en": "Marianitas La Moderna, coconut",
       "fr": "Marianitas La Moderna, noix de coco"
      },
-     "precio": 3.5
+     "precio": 2.45
     },
     {
      "imagen": "cat-marianitas-la-moderna-naranja",
@@ -714,7 +714,7 @@
       "en": "Marianitas La Moderna, orange",
       "fr": "Marianitas La Moderna, orange"
      },
-     "precio": 3.5
+     "precio": 2.45
     },
     {
      "imagen": "cat-marianitas-la-moderna-nuez",
@@ -723,7 +723,7 @@
       "en": "Marianitas La Moderna, nut",
       "fr": "Marianitas La Moderna, noix"
      },
-     "precio": 3.5
+     "precio": 2.45
     },
     {
      "imagen": "cat-miguelito-grande",
@@ -732,7 +732,7 @@
       "en": "Miguelito, large",
       "fr": "Miguelito, grand format"
      },
-     "precio": 26.5
+     "precio": 18.55
     }
    ]
   },
@@ -751,7 +751,7 @@
       "en": "Coconut drink",
       "fr": "Boisson à la noix de coco"
      },
-     "precio": 3.5
+     "precio": 2.45
     },
     {
      "imagen": "cat-cafe",
@@ -760,7 +760,7 @@
       "en": "Coffee",
       "fr": "Café"
      },
-     "precio": 3.99
+     "precio": 2.79
     },
     {
      "imagen": "cat-coca-de-vidrio",
@@ -769,7 +769,7 @@
       "en": "Coca-Cola, glass bottle",
       "fr": "Coca-Cola en bouteille de verre"
      },
-     "precio": 6.5
+     "precio": 4.55
     },
     {
      "imagen": "cat-dole-pina",
@@ -778,7 +778,7 @@
       "en": "Dole pineapple",
       "fr": "Ananas Dole"
      },
-     "precio": 5.99
+     "precio": 4.19
     },
     {
      "imagen": "cat-gatorade-amarillo",
@@ -787,7 +787,7 @@
       "en": "Gatorade, yellow",
       "fr": "Gatorade jaune"
      },
-     "precio": 2.99
+     "precio": 2.09
     },
     {
      "imagen": "cat-gatorade-amarillo",
@@ -796,7 +796,7 @@
       "en": "Gatorade, orange",
       "fr": "Gatorade orange"
      },
-     "precio": 2.99
+     "precio": 2.09
     },
     {
      "imagen": "cat-jarrito",
@@ -805,7 +805,7 @@
       "en": "Jarrito",
       "fr": "Jarrito"
      },
-     "precio": 6.5
+     "precio": 4.55
     },
     {
      "imagen": "cat-jarritos-grandes",
@@ -814,7 +814,7 @@
       "en": "Jarritos, large",
       "fr": "Jarritos, grand format"
      },
-     "precio": 10.5
+     "precio": 7.35
     },
     {
      "imagen": "cat-leche-sealtest",
@@ -823,7 +823,7 @@
       "en": "Sealtest milk",
       "fr": "Lait Sealtest"
      },
-     "precio": 12.99
+     "precio": 9.09
     },
     {
      "imagen": "cat-mundet",
@@ -832,7 +832,7 @@
       "en": "Mundet",
       "fr": "Mundet"
      },
-     "precio": 6.5
+     "precio": 4.55
     },
     {
      "imagen": "cat-pepsi",
@@ -841,7 +841,7 @@
       "en": "Pepsi",
       "fr": "Pepsi"
      },
-     "precio": 4.99
+     "precio": 3.49
     },
     {
      "imagen": "cat-sangria-senorial",
@@ -850,7 +850,7 @@
       "en": "Sangría Señorial",
       "fr": "Sangría Señorial"
      },
-     "precio": 11.5
+     "precio": 8.05
     },
     {
      "imagen": "cat-tang-para-agua",
@@ -859,7 +859,7 @@
       "en": "Tang drink mix",
       "fr": "Tang pour boisson"
      },
-     "precio": 2.5
+     "precio": 1.75
     }
    ]
   },
@@ -878,7 +878,7 @@
       "en": "El Yucateco achiote, small",
       "fr": "Achiote El Yucateco, petit"
      },
-     "precio": 3.99
+     "precio": 2.79
     },
     {
      "imagen": "cat-crema-mexicana-mac-dairy",
@@ -887,7 +887,7 @@
       "en": "Mac Dairy Mexican cream",
       "fr": "Crème mexicaine Mac Dairy"
      },
-     "precio": 13.5
+     "precio": 9.45
     },
     {
      "imagen": "cat-fideos-la-moderna-6-3-oz",
@@ -896,7 +896,7 @@
       "en": "La Moderna fideo noodles 6.3 oz",
       "fr": "Vermicelles La Moderna 6,3 oz"
      },
-     "precio": 3.5
+     "precio": 2.45
     },
     {
      "imagen": "cat-mayonesa",
@@ -905,7 +905,7 @@
       "en": "Mayonnaise",
       "fr": "Mayonnaise"
      },
-     "precio": 19.5
+     "precio": 13.65
     },
     {
      "imagen": "cat-media-crema-mexicana",
@@ -914,7 +914,7 @@
       "en": "Media Crema (Mexican table cream)",
       "fr": "Media Crema (crème mexicaine)"
      },
-     "precio": 15.99
+     "precio": 11.19
     },
     {
      "imagen": "cat-salsa-verde-la-costena-455-ml",
@@ -923,7 +923,7 @@
       "en": "La Costeña green salsa 455 ml",
       "fr": "Salsa verte La Costeña 455 ml"
      },
-     "precio": 7.5
+     "precio": 5.25
     },
     {
      "imagen": "cat-sardina",
@@ -932,7 +932,7 @@
       "en": "Sardines",
       "fr": "Sardines"
      },
-     "precio": 9.99
+     "precio": 6.99
     },
     {
      "imagen": "cat-sazonador",
@@ -941,7 +941,7 @@
       "en": "Seasoning",
       "fr": "Assaisonnement"
      },
-     "precio": 14.5
+     "precio": 10.15
     },
     {
      "imagen": "cat-shampoo-risitos-de-oro-todos",
@@ -950,7 +950,7 @@
       "en": "Risitos de Oro shampoo (all kinds)",
       "fr": "Shampooing Risitos de Oro (tous)"
      },
-     "precio": 10.5
+     "precio": 7.35
     },
     {
      "imagen": "cat-tajin-chico",
@@ -959,7 +959,7 @@
       "en": "Tajín, small",
       "fr": "Tajín, petit"
      },
-     "precio": 9.5
+     "precio": 6.65
     },
     {
      "imagen": "cat-valentina-grande",
@@ -968,7 +968,7 @@
       "en": "Valentina hot sauce, large",
       "fr": "Sauce Valentina, grand format"
      },
-     "precio": 11.5
+     "precio": 8.05
     }
    ]
   }
